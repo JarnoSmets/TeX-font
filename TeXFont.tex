@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\title{Conlang test}
+\author{Jarno Smets}
+\date{February 2023}
+
+\begin{document}
+
+%\dotfill
+
+
+\tikzset{grid/.pic={
+    \node(UpperLeft) at (0, 10){};
+    \node(UpperRight) at (7.5, 10){};
+    \node(BottomRight) at (7.5, 0){};
+    \node(BottomLeft) at (0,0){};
+    \node(Center) at (3.75,5){};
+    \node(CenterUpper) at (3.75,7.5){};
+    \node(CenterBottom) at (3.75,2.5){};
+    \node(CenterCellar) at (3.75,0){};
+    \node(CenterCeiling) at (3.75,10){};
+    \node(CenterUpperLeft) at (0,7.5){};
+    \node(CenterUpperRight) at (7.5,7.5){};
+    \node(CenterBottomLeft) at (0,2.5){};
+    \node(CenterBottomRight) at (7.5,2.5){};
+}
+}
+
+
+
+\newcommand*\insimg[1]{%
+\tikz[baseline=(key.base)]
+    \node[fill=white](test){#1\strut}
+}
+
+\tikzset{kut/.pic={
+    \draw[black, thick] (0,0) -- (0.3,0);
+    \draw[black,thick]  (0.15,0) -- (0.15, -0.3);
+}}
+
+\def\backwardthickness{-0.1}
+\def\forwardthickness{0.1}
+\def\upwardthickness{0.1}
+\def\downwardthickness{-0.1}
+
+
+\resizebox{8pt}{!}{
+\begin{tikzpicture}
+\pic{grid};
+\draw[draw=black, fill=black] ($(UpperLeft) + (0,\downwardthickness)$) rectangle ($(UpperRight)+(0,\upwardthickness)$);
+\draw[fill=black] ($(CenterCeiling) + (\backwardthickness,0)$) rectangle ($(CenterCellar) + (\forwardthickness,0)$);
+\end{tikzpicture}
+}
+test letter 
+
+
+\def\DeclareLetter#1#2#3#4{%
+\def\backwardthickness{-0.1}
+\def\forwardthickness{0.1}
+\def\upwardthickness{0.1}
+\def\downwardthickness{-0.1}
+\def\corpsgrootte{8pt}
+    \resizebox{\corpsgrootte}{!}{
+        \begin{tikzpicture}
+            \pic{grid};
+            \draw[fill=black] ($(#1) + (0,\downwardthickness)$) rectangle ($(#2)+(0,\upwardthickness)$);
+            \draw[fill=black] ($(#3) + (\backwardthickness,0)$) rectangle ($(#4) + (\forwardthickness,0)$);
+        \end{tikzpicture}
+    }
+}
+
+
+\DeclareLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} 
+
+\DeclareLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight}
+
+\DeclareLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar}
+
+\DeclareLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight}
+
+\DeclareLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft}
+
+
+
+
+
+
+\end{document}
