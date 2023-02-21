@@ -8,15 +8,42 @@
 
 \begin{document}
 
-%\dotfill
+% - Setting the grid - %
+
+% UpperLeft ------ CenterCeiling ------ UpperRight
+% |											|
+% | 											|
+% | 											|
+% | 											|
+%CenterUpperLeft	   CenterUpper		   CenterUpperRight
+% | 											|
+% | 											|
+% | 											|
+% | 											|
+%CenterLeft		     Center				CenterRight
+% | 											|
+% | 											|
+% | 											|
+% | 											|
+%CenterBottomLeft  CenterBottom			CenterBottomRight
+% | 											|
+% | 											|
+% | 											|
+% | 											|
+%BottomLeft	-----  CenterCellar	 -----	BottomRight										|
 
 
+
+
+%Setting grid coordinates
 \tikzset{grid/.pic={
     \node(UpperLeft) at (0, 10){};
     \node(UpperRight) at (7.5, 10){};
     \node(BottomRight) at (7.5, 0){};
     \node(BottomLeft) at (0,0){};
     \node(Center) at (3.75,5){};
+    \node(CenterLeft) at (0,5){};
+    \node(CenterRight) at (7.5,5){};
     \node(CenterUpper) at (3.75,7.5){};
     \node(CenterBottom) at (3.75,2.5){};
     \node(CenterCellar) at (3.75,0){};
@@ -25,27 +52,29 @@
     \node(CenterUpperRight) at (7.5,7.5){};
     \node(CenterBottomLeft) at (0,2.5){};
     \node(CenterBottomRight) at (7.5,2.5){};
-}
-}
-
-
-
-\newcommand*\insimg[1]{%
-\tikz[baseline=(key.base)]
-    \node[fill=white](test){#1\strut}
+	}
 }
 
-\tikzset{kut/.pic={
-    \draw[black, thick] (0,0) -- (0.3,0);
-    \draw[black,thick]  (0.15,0) -- (0.15, -0.3);
-}}
 
+%
+%\newcommand*\insimg[1]{%
+%\tikz[baseline=(key.base)]
+%    \node[fill=white](test){#1\strut}
+%} Code for inserting an image instead of text-token
+
+%
+%\tikzset{kut/.pic={
+%    \draw[black, thick] (0,0) -- (0.3,0);
+%    \draw[black,thick]  (0.15,0) -- (0.15, -0.3);
+%}} Example for creating a symbol with coordinates
+
+%% The thickness of the letters - since they are rectangles. These values are also embedded in \DeclareLetter
 \def\backwardthickness{-0.1}
 \def\forwardthickness{0.1}
 \def\upwardthickness{0.1}
 \def\downwardthickness{-0.1}
 
-
+%Example 'T' letter
 \resizebox{8pt}{!}{
 \begin{tikzpicture}
 \pic{grid};
@@ -53,9 +82,10 @@
 \draw[fill=black] ($(CenterCeiling) + (\backwardthickness,0)$) rectangle ($(CenterCellar) + (\forwardthickness,0)$);
 \end{tikzpicture}
 }
-test letter 
+test letter  %For reference
 
-
+%Command for instantly designing the letter
+%To be added: points and curves. White halos. This command should at one point give the letters their name. E.g.: \kut should be compiled as 'T' directly. 
 \def\DeclareLetter#1#2#3#4{%
 \def\backwardthickness{-0.1}
 \def\forwardthickness{0.1}
@@ -72,15 +102,15 @@ test letter
 }
 
 
-\DeclareLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} 
+\DeclareLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} %Gamma -name?
 
-\DeclareLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight}
+\DeclareLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight} %Backwards Gamma - name?
 
-\DeclareLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar}
+\DeclareLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar} %Upside-down T - name?
 
-\DeclareLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight}
+\DeclareLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight} %Backwards 'L' - name?
 
-\DeclareLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft}
+\DeclareLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft} % 'L' - name?
 
 
 
