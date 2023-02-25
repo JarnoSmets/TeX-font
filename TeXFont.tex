@@ -52,6 +52,8 @@
     \node(CenterUpperRight) at (7.5,7.5){};
     \node(CenterBottomLeft) at (0,2.5){};
     \node(CenterBottomRight) at (7.5,2.5){};
+    %Outside the grid
+    \node(LeftFootout) at (-3.75, 0){};
 	}
 }
 
@@ -112,6 +114,39 @@ test letter  %For reference
 
 \DeclareLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft} % 'L' - name?
 
+\DeclareLetter{CenterLeft}{CenterRight}{UpperLeft}{BottomLeft}
+%single turnstile, kinda, name?
+
+\DeclareLetter{CenterLeft}{CenterRight}{UpperRight}{BottomRight}
+%reverse single turnstile, name?
+
+\DeclareLetter{CenterLeft}{CenterRight}{CenterCeiling}{CenterCellar}
+%Cross, name?
+
+%\DeclareLetter{}
+
+%%Slanted right-angles
+
+\DeclareLetter{BottomLeft}{UpperRight}{UpperRight}{UpperLeft} 
+%slanted T
+
+\DeclareLetter{BottomLeft}{UpperRight}{UpperRight}{CenterCeiling}
+%Slanted half-T
+
+\DeclareLetter{BottomLeft}{UpperRight}{Center}{CenterLeft}
+%Slanted reverse turnstile
+
+\DeclareLetter{LeftFootout}{BottomLeft}{BottomLeft}{UpperRight}
+%Reverse slanted L
+
+\DeclareLetter{BottomLeft}{BottomRight}{CenterCellar}{UpperRight}
+%Upside-down slanted T
+
+\DeclareLetter{BottomLeft}{BottomRight}{BottomLeft}{UpperRight}
+%Slanted L
+
+\DeclareLetter{BottomLeft}{UpperLeft}{CenterLeft}{CenterRight}
+%slanted single turnstile
 
 
 
