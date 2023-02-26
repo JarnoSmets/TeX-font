@@ -57,7 +57,32 @@
 	}
 }
 
+%Slanted grid
 
+\def\slant{0.5}
+\def\halfslant{0.5\slant}
+\def\threequarterslant{0.75\slant}
+\def\quarterslant{0.25\slant}
+\tikzset{gridsl/.pic={
+    \node(SLUpperLeft) at (0 + \slant , 10){};
+    \node(SLUpperRight) at (7.5 + \slant , 10){};
+    \node(SLBottomRight) at (7.5, 0){};%bottom - untouched - you can use BottomRight
+    \node(SLBottomLeft) at (0,0){};%bottom - untouched - you can use BottomRight
+    \node(SLCenter) at (3.75 + \halfslant ,5){};
+    \node(SLCenterLeft) at (0 + \halfslant ,5){};
+    \node(SLCenterRight) at (7.5 + \halfslant ,5){};
+    \node(SLCenterUpper) at (3.75 + \threequarterslant  ,7.5){};
+    \node(SLCenterBottom) at (3.75 + \threequarterslant ,2.5){};
+    \node(SLCenterCellar) at (3.75,0){};%bottom - untouched - you can use BottomRight
+    \node(SLCenterCeiling) at (3.75 + \slant,10){};
+    \node(SLCenterUpperLeft) at (0 + \threequarterslant ,7.5){};
+    \node(SLCenterUpperRight) at (7.5 + \threequarterslant ,7.5){};
+    \node(SLCenterBottomLeft) at (0 + \quarterslant ,2.5){};
+    \node(SLCenterBottomRight) at (7.5 + \quarterslant ,2.5){};
+    %Outside the grid
+    \node(LeftFootout) at (-3.75, 0){};
+	}
+}
 %
 %\newcommand*\insimg[1]{%
 %\tikz[baseline=(key.base)]
@@ -77,13 +102,14 @@
 \def\downwardthickness{-0.1}
 
 %Example 'T' letter
-\resizebox{8pt}{!}{
-\begin{tikzpicture}
-\pic{grid};
-\draw[draw=black, fill=black] ($(UpperLeft) + (0,\downwardthickness)$) rectangle ($(UpperRight)+(0,\upwardthickness)$);
-\draw[fill=black] ($(CenterCeiling) + (\backwardthickness,0)$) rectangle ($(CenterCellar) + (\forwardthickness,0)$);
-\end{tikzpicture}
-}
+%\resizebox{8pt}{!}{
+%\begin{tikzpicture}
+%\pic{grid};
+%\pic{gridsl};
+%\draw[draw=black, fill=black] ($(UpperLeft) + (0,\downwardthickness)$) rectangle ($(UpperRight)+(0,\upwardthickness)$);
+%\draw[fill=black] ($(CenterCeiling) + (\backwardthickness,0)$) rectangle ($(CenterCellar) + (\forwardthickness,0)$);
+%\end{tikzpicture}
+%}
 test letter  %For reference
 
 %Command for instantly designing the letter
@@ -97,6 +123,7 @@ test letter  %For reference
     \resizebox{\corpsgrootte}{!}{
         \begin{tikzpicture}
             \pic{grid};
+            \pic{gridsl};
             \draw[fill=black] ($(#1) + (0,\downwardthickness)$) rectangle ($(#2)+(0,\upwardthickness)$);
             \draw[fill=black] ($(#3) + (\backwardthickness,0)$) rectangle ($(#4) + (\forwardthickness,0)$);
         \end{tikzpicture}
@@ -148,7 +175,9 @@ test letter  %For reference
 \DeclareLetter{BottomLeft}{UpperLeft}{CenterLeft}{CenterRight}
 %slanted single turnstile
 
+\dotfill
 
+\DeclareLetter{BottomLeft}{SLUpperLeft}{SLCenterLeft}{SLCenterRight}
 
 
 
