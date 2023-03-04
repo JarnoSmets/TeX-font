@@ -34,10 +34,6 @@
 
 
 
-\def\slant{0.5}
-\def\halfslant{0.25}
-\def\threequarterslant{0.75}
-\def\quarterslant{0.25}
 
 %Setting grid coordinates
 \tikzset{grid/.pic={
@@ -55,99 +51,28 @@
     \node(CenterUpperLeft) at (0,7.5){};
     \node(CenterUpperRight) at (7.5,7.5){};
     \node(CenterBottomLeft) at (0,2.5){};
-    \node(CenterBottomRight) at (7.5,2.5){};
-    %Slanted
-	\node(SLUpperLeft) at ({0 + \slant }, 10){};
-    \node(SLUpperRight) at ({7.5 + \slant} , 10){};
-    \node(SLBottomRight) at (7.5, 0){};%bottom - untouched - you can use BottomRight
-    \node(SLBottomLeft) at (0,0){};%bottom - untouched - you can use BottomRight
-    \node(SLCenter) at ({3.75 + \halfslant} ,5){};
-    \node(SLCenterLeft) at ({0 + \halfslant} ,5){};
-    \node(SLCenterRight) at ({7.5 + \halfslant} ,5){};
-    \node(SLCenterUpper) at ({3.75 + \threequarterslant} ,7.5){};
-    \node(SLCenterBottom) at ({3.75 + \threequarterslant },2.5){};
-    \node(SLCenterCellar) at (3.75,0){};%bottom - untouched - you can use BottomRight
-    \node(SLCenterCeiling) at ({3.75 + \slant} ,10){};
-    \node(SLCenterUpperLeft) at ({0 + \threequarterslant },7.5){};
-    \node(SLCenterUpperRight) at ({7.5 + \threequarterslant },7.5){};
-    \node(SLCenterBottomLeft) at ({0 + \quarterslant} ,2.5){};
-    \node(SLCenterBottomRight) at ({7.5 + \quarterslant},2.5){};
-    %Outside the grid    
-    
-    %Outside the grid
-    \node(LeftFootout) at (-3.75, 0){};
 	}
 }
 
-%Slanted grid
-
-\def\slant{0.5}
-\def\halfslant{0.25}
-\def\threequarterslant{0.75}
-\def\quarterslant{0.25}
-%\tikzset{gridsl/.pic={
-%    \node(SLUpperLeft) at ({0 + \slant }, 10){};
-%    \node(SLUpperRight) at ({7.5 + \slant} , 10){};
-%    \node(SLBottomRight) at (7.5, 0){};%bottom - untouched - you can use BottomRight
-%    \node(SLBottomLeft) at (0,0){};%bottom - untouched - you can use BottomRight
-%    \node(SLCenter) at ({3.75 + \halfslant} ,5){};
-%    \node(SLCenterLeft) at ({0 + \halfslant} ,5){};
-%    \node(SLCenterRight) at ({7.5 + \halfslant} ,5){};
-%    \node(SLCenterUpper) at ({3.75 + \threequarterslant} ,7.5){};
-%    \node(SLCenterBottom) at ({3.75 + \threequarterslant },2.5){};
-%    \node(SLCenterCellar) at (3.75,0){};%bottom - untouched - you can use BottomRight
-%    \node(SLCenterCeiling) at ({3.75 + \slant} ,10){};
-%    \node(SLCenterUpperLeft) at ({0 + \threequarterslant },7.5){};
-%    \node(SLCenterUpperRight) at ({7.5 + \threequarterslant },7.5){};
-%    \node(SLCenterBottomLeft) at ({0 + \quarterslant} ,2.5){};
-%    \node(SLCenterBottomRight) at ({7.5 + \quarterslant},2.5){};
-    %Outside the grid
-  
-%	}
-%}
-%
-%\newcommand*\insimg[1]{%
-%\tikz[baseline=(key.base)]
-%    \node[fill=white](test){#1\strut}
-%} Code for inserting an image instead of text-token
-
-%
-%\tikzset{kut/.pic={
-%    \draw[black, thick] (0,0) -- (0.3,0);
-%    \draw[black,thick]  (0.15,0) -- (0.15, -0.3);
-%}} Example for creating a symbol with coordinates
-
 %% The thickness of the letters - since they are rectangles. These values are also embedded in \DeclareLetter
-\def\backwardthickness{-0.1}
-\def\forwardthickness{0.1}
-\def\upwardthickness{0.1}
-\def\downwardthickness{-0.1}
+%\def\backwardthickness{-0.1}
+%\def\forwardthickness{0.1}
+%\def\upwardthickness{0.1}
+%\def\downwardthickness{-0.1}
+\def\thickness{0.25}
 
-%Example 'T' letter
-%\resizebox{8pt}{!}{
-%\begin{tikzpicture}
-%\pic{grid};
-%\pic{gridsl};
-%\draw[draw=black, fill=black] ($(UpperLeft) + (0,\downwardthickness)$) rectangle ($(UpperRight)+(0,\upwardthickness)$);
-%\draw[fill=black] ($(CenterCeiling) + (\backwardthickness,0)$) rectangle ($(CenterCellar) + (\forwardthickness,0)$);
-%\end{tikzpicture}
-%}
 test letter  %For reference
 
 %Command for instantly designing the letter
 %To be added: points and curves. White halos. This command should at one point give the letters their name. E.g.: \kut should be compiled as 'T' directly. 
 \def\DeclareLetter#1#2#3#4{%
-\def\backwardthickness{-0.1}
-\def\forwardthickness{0.1}
-\def\upwardthickness{0.1}
-\def\downwardthickness{-0.1}
 \def\corpsgrootte{8pt}
     \resizebox{\corpsgrootte}{!}{
         \begin{tikzpicture}
             \pic{grid};
 %            \pic{gridsl};
-            \draw[fill=black] ($(#1) + (0,\downwardthickness)$) rectangle ($(#2)+(0,\upwardthickness)$);
-            \draw[fill=black] ($(#3) + (\backwardthickness,0)$) rectangle ($(#4) + (\forwardthickness,0)$);
+            \draw[line width = \thickness] (#1) -- (#2);
+	    \draw[line width = \thickness] (#3) -- (#4); 
         \end{tikzpicture}
     }
 }
@@ -172,34 +97,12 @@ test letter  %For reference
 \DeclareLetter{CenterLeft}{CenterRight}{CenterCeiling}{CenterCellar}
 %Cross, name?
 
-%\DeclareLetter{}
+%% Attempt at slant
 
-%%Slanted right-angles
+\DeclareLetter{UpperLeft}{UpperRight}{CenterCeiling}{BottomLeft}
 
-\DeclareLetter{BottomLeft}{UpperRight}{UpperRight}{UpperLeft} 
-%slanted T
 
-\DeclareLetter{BottomLeft}{UpperRight}{UpperRight}{CenterCeiling}
-%Slanted half-T
 
-\DeclareLetter{BottomLeft}{UpperRight}{Center}{CenterLeft}
-%Slanted reverse turnstile
-
-\DeclareLetter{LeftFootout}{BottomLeft}{BottomLeft}{UpperRight}
-%Reverse slanted L
-
-\DeclareLetter{BottomLeft}{BottomRight}{CenterCellar}{UpperRight}
-%Upside-down slanted T
-
-\DeclareLetter{BottomLeft}{BottomRight}{BottomLeft}{UpperRight}
-%Slanted L
-
-\DeclareLetter{BottomLeft}{UpperLeft}{CenterLeft}{CenterRight}
-%slanted single turnstile
-
-\dotfill
-
-\DeclareLetter{SLBottomLeft}{SLUpperLeft}{SLCenterLeft}{SLCenterRight}
 
 
 
