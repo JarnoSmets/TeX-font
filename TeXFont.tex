@@ -54,18 +54,57 @@
 	}
 }
 
-%% The thickness of the letters - since they are rectangles. These values are also embedded in \DeclareLetter
-%\def\backwardthickness{-0.1}
-%\def\forwardthickness{0.1}
-%\def\upwardthickness{0.1}
-%\def\downwardthickness{-0.1}
-\def\thickness{0.25}
+\def\thickness{0.5}
 
-test letter  %For reference
+%Command for naming strokes
+
+%Horizontal strokes
+\def\TopHorizontal{(UpperLeft) -- (UpperRight);}
+\def\UpperHorizontal{(CenterUpperLeft) -- (CenterUpperRight);}
+%\let\CenterHorizontal{\draw[line width = \thickness] (CenterLeft) -- (CenterRight);}
+\def\CH{(CenterLeft) -- (CenterRight)}
+\def\CenterHorizontal{(CenterLeft) -- (CenterRight)}
+\def\LowerHorizontal{(CenterBottomLeft) -- (CenterBottomRight);}
+\def\BottomHorizontal{(BottomLeft) -- (BottomRight);}
+%Vertical Strokes
+%\let\LeftVertical{\draw[line width = \thickness] (BottomLeft) -- (UppperLeft);}
+\def\LV{(BottomLeft) -- (UpperLeft)}
+\def\LeftVertical{(BottomLeft) -- (UpperLeft)}
+\def\CenterVertical{(CenterCellar) -- (CenterCeiling);}
+\def\RightVertical{(BottomRight) -- (UpperRight);}
+%Diagonal strokes - adjusted thickness!!!!!
+\def\RightDiagonal{(BottomLeft) -- (UpperRight);}
+\def\LeftDiagonal{(BottomRight) -- (UpperLeft);}
+% - Diagonal strokes - hypothenuses; smaller diamond
+\def\HypoBottomLeft{(CenterLeft) -- (CenterCellar);}
+\def\HypoBottomRight{(CenterRight) -- (CenterCellar);}
+\def\HypoUpperLeft{(CenterLeft) -- (CenterCeiling);}
+\def\HypoUpperRight{(CenterRight) -- (CenterCeiling);}
+% - Arches
+\def\ArchBottomLeft{(CenterLeft) .. controls (Center) .. (CenterCellar);}
+\def\ArchBottomRight{(CenterRight) .. controls (Center) ..  (CenterCellar);}
+\def\ArchUpperLeft{(UpperLeft).. controls (CenterCeiling) .. (Center);}
+\def\ArchUpperRight{(UpperRight) .. controls (CenterCeiling) .. (Center);}
+% - Ramps
+\def\RampBottomLeft{(BottomLeft) .. controls (CenterCellar) ..  (Center);}
+\def\RampBottomRight{(BottomRight) .. controls (CenterCellar) ..   (Center);}
+\def\RampUpperLeft{(CenterLeft) .. controls (Center) ..   (CenterCeiling);}
+\def\RampUpperRight{(CenterRight) .. controls (Center) ..   (CenterCeiling);}
+
+%% Dot and Torus
+
+%Dot
+\def\Dot#1{\draw[fill=black] (#1) circle (\thickness){};}
+
+%Torus
+
+\def\Torus#1{\draw[color=black, line width = 6 * \thickness] (#1) circle (\thickness){};}
+
+
 
 %Command for instantly designing the letter
 %To be added: points and curves. White halos. This command should at one point give the letters their name. E.g.: \kut should be compiled as 'T' directly. 
-\def\DeclareLetter#1#2#3#4{%
+\def\DeclareExactLetter#1#2#3#4{%
 \def\corpsgrootte{8pt}
     \resizebox{\corpsgrootte}{!}{
         \begin{tikzpicture}
@@ -78,32 +117,56 @@ test letter  %For reference
 }
 
 
-\DeclareLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} %Gamma -name?
+\DeclareExactLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} %Gamma -name?
 
-\DeclareLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight} %Backwards Gamma - name?
+\DeclareExactLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight} %Backwards Gamma - name?
 
-\DeclareLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar} %Upside-down T - name?
+\DeclareExactLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar} %Upside-down T - name?
 
-\DeclareLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight} %Backwards 'L' - name?
+\DeclareExactLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight} %Backwards 'L' - name?
 
-\DeclareLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft} % 'L' - name?
+\DeclareExactLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft} % 'L' - name?
 
-\DeclareLetter{CenterLeft}{CenterRight}{UpperLeft}{BottomLeft}
+\DeclareExactLetter{CenterLeft}{CenterRight}{UpperLeft}{BottomLeft}
 %single turnstile, kinda, name?
 
-\DeclareLetter{CenterLeft}{CenterRight}{UpperRight}{BottomRight}
+\DeclareExactLetter{CenterLeft}{CenterRight}{UpperRight}{BottomRight}
 %reverse single turnstile, name?
 
-\DeclareLetter{CenterLeft}{CenterRight}{CenterCeiling}{CenterCellar}
+\DeclareExactLetter{CenterLeft}{CenterRight}{CenterCeiling}{CenterCellar}
 %Cross, name?
 
 %% Attempt at slant
 
-\DeclareLetter{UpperLeft}{UpperRight}{CenterCeiling}{BottomLeft}
+\dotfill
 
+\def\DeclareLetter#1#2{%
+	\def\corpsgrootte{8pt}
+		\resizebox{\corpsgrootte}{!}{
+        		\begin{tikzpicture}
+            			\pic{grid};
+				\def\LV{(BottomLeft) -- (UpperLeft)}
+				\def\CH{(CenterLeft) -- (CenterRight)}
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+        		\end{tikzpicture}
+		}
+}
 
+\DeclareLetter{\LV}{\CH}
+\DeclareLetter{\LV}{\TopHorizontal}
+\DeclareLetter{\RightVertical}{\TopHorizontal}
+\DeclareLetter{\BottomHorizontal}{\CenterVertical}
+\DeclareLetter{\BottomHorizontal}{\RightVertical}
+\DeclareLetter{\BottomHorizontal}{\RightVertical}
+\DeclareLetter{\BottomHorizontal}{\LeftVertical}
+\DeclareLetter{\LeftVertical}{\CenterHorizontal}
+\DeclareLetter{\RightVertical}{\CenterHorizontal}
+\DeclareLetter{\CenterVertical}{\CenterHorizontal}
 
+%Slanted row
 
+\DeclareLetter{\RightDiagonal}{\TopHorizontal}
 
 
 \end{document}
