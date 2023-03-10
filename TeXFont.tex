@@ -51,6 +51,15 @@
     \node(CenterUpperLeft) at (0,7.5){};
     \node(CenterUpperRight) at (7.5,7.5){};
     \node(CenterBottomLeft) at (0,2.5){};
+    
+    %Left-outward nodes
+    \node(OuterUpperLeft) at (-3.75,10){};
+    \node(OuterCenterLeft) at (-3.75, 5){};
+    \node(OuterBottomLeft) at (-3.75, 0){};
+    %Right-outward nodes
+    \node(OuterUpperRight) at (11.25,10){};
+    \node(OuterCenterRight) at (11.25,5){};
+    \node(OuterBottomRight) at (11.25,0){};
 	}
 }
 
@@ -59,15 +68,25 @@
 %Command for naming strokes
 
 %Horizontal strokes
+	%Top
 \def\TopHorizontal{(UpperLeft) -- (UpperRight);}
+\def\LeftTopHorizontal{(OuterUpperLeft) -- (CenterCeiling);}
+\def\RightTopHorizontal{(OuterUpperRight) -- (CenterCeiling);}
+	%Upper
 \def\UpperHorizontal{(CenterUpperLeft) -- (CenterUpperRight);}
-%\let\CenterHorizontal{\draw[line width = \thickness] (CenterLeft) -- (CenterRight);}
+	%Center
 \def\CH{(CenterLeft) -- (CenterRight)}
-\def\CenterHorizontal{(CenterLeft) -- (CenterRight)}
+\def\CenterHorizontal{(CenterLeft) -- (CenterRight);}
+\def\LeftCenterHorizontal{(OuterCenterLeft) -- (CenterLeft);}
+\def\RightCenterHorizontal{(Center) -- (CenterRight);}
+%\def\RightCenterHorizontalRight{(}
+	%Lower
 \def\LowerHorizontal{(CenterBottomLeft) -- (CenterBottomRight);}
+	%Bottom
 \def\BottomHorizontal{(BottomLeft) -- (BottomRight);}
+\def\LeftBottomHorizontal{(OuterBottomLeft) -- (CenterCellar);}
+\def\RightBottomHorizontal{(OuterBottomRight) -- (CenterCellar);}
 %Vertical Strokes
-%\let\LeftVertical{\draw[line width = \thickness] (BottomLeft) -- (UppperLeft);}
 \def\LV{(BottomLeft) -- (UpperLeft)}
 \def\LeftVertical{(BottomLeft) -- (UpperLeft)}
 \def\CenterVertical{(CenterCellar) -- (CenterCeiling);}
@@ -80,6 +99,9 @@
 \def\HypoBottomRight{(CenterRight) -- (CenterCellar);}
 \def\HypoUpperLeft{(CenterLeft) -- (CenterCeiling);}
 \def\HypoUpperRight{(CenterRight) -- (CenterCeiling);}
+% - Diagonal strokes - From left to TopHorizontal
+\def\RightCenterDiagonal{(BottomLeft) -- (CenterCeiling);}
+\def\LeftCenterDiagonal{(BottomRight) -- (CenterCeiling);}
 % - Arches
 \def\ArchBottomLeft{(CenterLeft) .. controls (Center) .. (CenterCellar);}
 \def\ArchBottomRight{(CenterRight) .. controls (Center) ..  (CenterCellar);}
@@ -166,7 +188,24 @@
 
 %Slanted row
 
-\DeclareLetter{\RightDiagonal}{\TopHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\TopHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\LeftTopHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\LeftCenterHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\LeftBottomHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\BottomHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\RightCenterHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\RightTopHorizontal}
+\DeclareLetter{\RightCenterDiagonal}{\CenterHorizontal}
 
+%Left-slanting row
+
+\DeclareLetter{\LeftCenterDiagonal}{\TopHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\RightTopHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\RightCenterHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\RightBottomHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\BottomHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\LeftCenterHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\LeftTopHorizontal}
+\DeclareLetter{\LeftCenterDiagonal}{\CenterHorizontal}
 
 \end{document}
