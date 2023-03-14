@@ -1,185 +1,26 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tikz}
+\usepackage[tmargin=30pt]{geometry}
 \usetikzlibrary{calc}
-\title{Conlang test}
-\author{Jarno Smets}
-\date{February 2023}
+\title{Conlang Glyphs}
+\author{The Conlangers}
+\date{March 2023}
 
 \begin{document}
+\maketitle
+\def\thickness{15pt}
 
-% - Setting the grid - %
+\thispagestyle{empty}
+\input{Grid}
+\input{Cmd}
+\input{Lines}
+%\input{Exact}
 
-% UpperLeft ------ CenterCeiling ------ UpperRight
-% |											|
-% | 											|
-% | 											|
-% | 											|
-%CenterUpperLeft	   CenterUpper		   CenterUpperRight
-% | 											|
-% | 											|
-% | 											|
-% | 											|
-%CenterLeft		     Center				CenterRight
-% | 											|
-% | 											|
-% | 											|
-% | 											|
-%CenterBottomLeft  CenterBottom			CenterBottomRight
-% | 											|
-% | 											|
-% | 											|
-% | 											|
-%BottomLeft	-----  CenterCellar	 -----	BottomRight										|
+%\renewcommand{\corpsgrootte}{12pt}
 
+%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-%Setting grid coordinates
-\tikzset{grid/.pic={
-    \node(UpperLeft) at (0, 10){};
-    \node(UpperRight) at (7.5, 10){};
-    \node(BottomRight) at (7.5, 0){};
-    \node(BottomLeft) at (0,0){};
-    \node(Center) at (3.75,5){};
-    \node(CenterLeft) at (0,5){};
-    \node(CenterRight) at (7.5,5){};
-    \node(CenterUpper) at (3.75,7.5){};
-    \node(CenterBottom) at (3.75,2.5){};
-    \node(CenterCellar) at (3.75,0){};
-    \node(CenterCeiling) at (3.75,10){};
-    \node(CenterUpperLeft) at (0,7.5){};
-    \node(CenterUpperRight) at (7.5,7.5){};
-    \node(CenterBottomLeft) at (0,2.5){};
-    
-    %Quarter-coordinates
-    \node(QUpperLeft) at (1.875,7.5 ){}; 
-    %Left-outward nodes
-    \node(OuterUpperLeft) at (-3.75,10){};
-    \node(OuterCenterLeft) at (-3.75, 5){};
-    \node(OuterBottomLeft) at (-3.75, 0){};
-    %Right-outward nodes
-    \node(OuterUpperRight) at (11.25,10){};
-    \node(OuterCenterRight) at (11.25,5){};
-    \node(OuterBottomRight) at (11.25,0){};
-	}
-}
-
-\def\thickness{10pt}
-
-%Command for naming strokes
-
-%Horizontal strokes
-	%Top
-\def\TopHorizontal{(UpperLeft) -- (UpperRight);}
-\def\LeftTopHorizontal{(OuterUpperLeft) -- (CenterCeiling);}
-\def\RightTopHorizontal{(OuterUpperRight) -- (CenterCeiling);}
-	%Upper
-\def\UpperHorizontal{(CenterUpperLeft) -- (CenterUpperRight);}
-\def\LeftUpperHorizontal{(CenterUpperLeft) -- (CenterUpper);}
-\def\RightUpperHorizontal{(CenterUpperRight) -- (CenterUpper);}
-\def\QRightUpperHorizontal{(QUpperLeft) -- (CenterUpperRight);}
-	%Center
-\def\CH{(CenterLeft) -- (CenterRight)}
-\def\CenterHorizontal{(CenterLeft) -- (CenterRight);}
-\def\LeftCenterHorizontal{(OuterCenterLeft) -- (CenterLeft);}
-\def\RightCenterHorizontal{(Center) -- (CenterRight);}
-%\def\RightCenterHorizontalRight{(}
-	%Lower
-\def\LowerHorizontal{(CenterBottomLeft) -- (CenterBottomRight);}
-\def\LeftLowerHorizontal{(CenterBottomLeft) -- (CenterBottom);}
-	%Bottom
-\def\BottomHorizontal{(BottomLeft) -- (BottomRight);}
-\def\LeftBottomHorizontal{(OuterBottomLeft) -- (CenterCellar);}
-\def\RightBottomHorizontal{(OuterBottomRight) -- (CenterCellar);}
-%Vertical Strokes
-\def\LV{(BottomLeft) -- (UpperLeft)}
-\def\LeftVertical{(BottomLeft) -- (UpperLeft)}
-\def\CenterVertical{(CenterCellar) -- (CenterCeiling);}
-\def\RightVertical{(BottomRight) -- (UpperRight);}
-%Diagonal strokes - adjusted thickness!!!!!
-\def\RightDiagonal{(BottomLeft) -- (UpperRight);}
-\def\LeftDiagonal{(BottomRight) -- (UpperLeft);}
-% - Diagonal strokes - hypothenuses; smaller diamond
-\def\HypoBottomLeft{(CenterLeft) -- (CenterCellar);}
-\def\HypoBottomRight{(CenterRight) -- (CenterCellar);}
-\def\HypoUpperLeft{(CenterLeft) -- (CenterCeiling);}
-\def\HypoUpperRight{(CenterRight) -- (CenterCeiling);}
-% - Diagonal strokes - From left to TopHorizontal
-\def\RightCenterDiagonal{(BottomLeft) -- (CenterCeiling);}
-\def\LeftCenterDiagonal{(BottomRight) -- (CenterCeiling);}
-% - Arches
-\def\ArchBottomLeft{(CenterLeft) .. controls (Center) .. (CenterCellar);}
-\def\ArchBottomRight{(CenterUpperRight) .. controls (CenterUpper) ..  (CenterCellar);}
-\def\ArchUpperLeft{(UpperLeft).. controls (CenterCeiling) .. (Center);}
-\def\ArchUpperRight{(UpperRight) .. controls (CenterCeiling) .. (Center);}
-% - Ramps
-\def\RampBottomLeft{(BottomLeft) .. controls (CenterCellar) ..  (Center);}
-\def\RampBottomRight{(BottomRight) .. controls (CenterCellar) ..   (Center);}
-\def\RampUpperLeft{(CenterLeft) .. controls (Center) ..   (CenterCeiling);}
-\def\RampUpperRight{(CenterRight) .. controls (Center) ..   (CenterCeiling);}
-
-%% Dot and Torus
-
-%Dot
-\def\Dot#1{\draw[fill=black] (#1) circle (\thickness){};}
-
-%Torus
-
-\def\Torus#1{\draw[color=black, line width = 6 * \thickness] (#1) circle (\thickness){};}
-
-
-
-%Command for instantly designing the letter
-%To be added: points and curves. White halos. This command should at one point give the letters their name. E.g.: \kut should be compiled as 'T' directly. 
-\def\DeclareExactLetter#1#2#3#4{%
-\def\corpsgrootte{8pt}
-    \resizebox{\corpsgrootte}{!}{
-        \begin{tikzpicture}
-            \pic{grid};
-%            \pic{gridsl};
-            \draw[line width = \thickness] (#1) -- (#2);
-	    \draw[line width = \thickness] (#3) -- (#4); 
-        \end{tikzpicture}
-    }
-}
-
-
-\DeclareExactLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} %Gamma -name?
-
-\DeclareExactLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight} %Backwards Gamma - name?
-
-\DeclareExactLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar} %Upside-down T - name?
-
-\DeclareExactLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight} %Backwards 'L' - name?
-
-\DeclareExactLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft} % 'L' - name?
-
-\DeclareExactLetter{CenterLeft}{CenterRight}{UpperLeft}{BottomLeft}
-%single turnstile, kinda, name?
-
-\DeclareExactLetter{CenterLeft}{CenterRight}{UpperRight}{BottomRight}
-%reverse single turnstile, name?
-
-\DeclareExactLetter{CenterLeft}{CenterRight}{CenterCeiling}{CenterCellar}
-%Cross, name?
-
-%% Attempt at slant
-
-\dotfill
-
-\def\DeclareLetter#1#2{%
-	\def\corpsgrootte{8pt}
-		\resizebox{\corpsgrootte}{!}{
-        		\begin{tikzpicture}
-            			\pic{grid};
-				\def\LV{(BottomLeft) -- (UpperLeft)}
-				\def\CH{(CenterLeft) -- (CenterRight)}
-				\draw[line width = \thickness] #1;
-				\draw[line width = \thickness] #2;
-        		\end{tikzpicture}
-		}
-}
 
 \DeclareLetter{\LV}{\CH}
 \DeclareLetter{\LV}{\TopHorizontal}
@@ -218,5 +59,127 @@
 \DeclareLetter{\ArchBottomRight}{\UpperHorizontal}
 \DeclareLetter{\ArchBottomRight}{\QRightUpperHorizontal}
 \DeclareLetter{\ArchBottomRight}{\LeftLowerHorizontal}
+\DeclareLetter{\ArchBottomRight}{\RightLeftBottomHorizontal}
+\DeclareLetter{\ArchBottomRight}{\BottomHorizontal}
+\DeclareLetter{\ArchBottomRight}{\LeftRightBottomHorizontal}
+\DeclareLetter{\ArchBottomRight}{\LeftLowerHorizontal}
+\DeclareLetter{\ArchBottomRight}{\OuterRightUpperHorizontal}
+\DeclareLetter{\ArchBottomRight}{\CenterHorizontal}
+...
+...
+
+%Arches - 2nd row
+
+\DeclareLetter{\ArchBottomLeft}{\UpperHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\QLeftUpperHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\RightLowerHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\LeftRightBottomHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\BottomHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\RightLeftBottomHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\RightLowerHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\OuterLeftUpperHorizontal}
+\DeclareLetter{\ArchBottomLeft}{\CenterHorizontal}
+..
+...
+
+\DeclareLetter{\RampBottomRight}{\UpperHorizontal}
+\DeclareLetter{\RampBottomRight}{\QLeftUpperHorizontal}
+\DeclareLetter{\RampBottomRight}{\LeftLowerHorizontal}
+\DeclareLetter{\RampBottomRight}{\LeftRightBottomHorizontal}
+\DeclareLetter{\RampBottomRight}{\BottomHorizontal}
+\DeclareLetter{\RampBottomRight}{\RightLeftBottomHorizontal}
+\DeclareLetter{\RampBottomRight}{\RightLowerHorizontal}
+\DeclareLetter{\RampBottomRight}{\RightUpperHorizontal}
+\DeclareLetter{\RampBottomRight}{\CenterHorizontal}
+..
+...
+
+\DeclareLetter{\RampBottomLeft}{\UpperHorizontal}
+\DeclareLetter{\RampBottomLeft}{\QLeftUpperHorizontal}
+\DeclareLetter{\RampBottomLeft}{\LeftLowerHorizontal}
+\DeclareLetter{\RampBottomLeft}{\LeftRightBottomHorizontal}
+\DeclareLetter{\RampBottomLeft}{\BottomHorizontal}
+\DeclareLetter{\RampBottomLeft}{\RightLeftBottomHorizontal}
+\DeclareLetter{\RampBottomLeft}{\RightLowerHorizontal}
+\DeclareLetter{\RampBottomLeft}{\RightUpperHorizontal}
+\DeclareLetter{\RampBottomLeft}{\CenterHorizontal}
+..
+...
+
+%Dots
+\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpper}}
+\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperLeft}}
+\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterLeft}}
+\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomLeft}}
+\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottom}}
+\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomRight}}
+\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterRight}}
+\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperRight}}
+\DeclareLetter{\CenterHorizontal}{\Dot{Center}}
+
+%Hypos
+
+\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}
+\DeclareLetter{\CenterVertical}{\HypoUpperLeft}
+\DeclareLetter{\CenterVertical}{\LeftBigHypoUpperLeft}
+\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}
+\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomLeft}
+\DeclareLetter{\CenterBottomVertical}{\RightBigHypoBottomLeft}
+\DeclareLetter{\CenterVertical}{\RightBigHypoUpperLeft}
+\DeclareLetter{\CenterVertical}{\RightHypoHeaven}
+\DeclareLetter{\CenterVertical}{\BigHypoCenterLeft}
+\DeclareLetter{\CenterVertical}{\BigHypoCenterLeft}
+...
+
+\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperRight}
+\DeclareLetter{\CenterVertical}{\HypoUpperRight}
+\DeclareLetter{\CenterVertical}{\LeftBigHypoUpperRight}
+\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomRight}
+\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomRight}
+\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomRight}
+\DeclareLetter{\CenterVertical}{\LeftBigHypoUpperRight}
+\DeclareLetter{\CenterVertical}{\LeftHypoHeaven}
+\DeclareLetter{\CenterVertical}{\BigHypoCenterRight}
+\DeclareLetter{\CenterVertical}{\BigHypoCenterRight}
+
+\DeclareLetter{\CenterBottomVertical}{\BigCurveUpperRight}
+\DeclareLetter{\CenterBottomVertical}{\Cup{CenterUpper}}
+
+
+
+%Vertcir
+
+\DeclareLetter{\CenterVertical}{\Dot{CenterHeaven}}
+\DeclareLetter{\CenterVertical}{\Dot{UpperLeft}}
+\DeclareLetter{\CenterVertical}{\Dot{CenterBottomLeft}}
+\DeclareLetter{\CenterVertical}{\Dot{BottomLeft}}
+\DeclareLetter{\CenterVertical}{\Dot{CenterHell}}
+\DeclareLetter{\CenterVertical}{\Dot{BottomRight}}
+\DeclareLetter{\CenterVertical}{\Dot{CenterRight}}
+\DeclareLetter{\CenterVertical}{\Dot{UpperRight}}
+\DeclareLetter{\CenterVertical}{\Dot{Center}}
+...
+
+\DeclareLetter{\BigHypoUpperLeft}{\LeftCenterUpperDiagonal}
+\DeclareLetter{\LeftBigHypoUpperLeft}{\LeftCenterUpperDiagonal}
+
+
+\dotfill
+
+\vspace{2cm}
+
+Dear group members (and Ana if she reads this),
+
+
+I've been working very hard on this font. Some remarks coming from me:
+\begin{itemize}
+	\item This is essentially the digitalized version of the photo I made of the script. 
+	\item I'm working on the letters with a curve in them. This proves to be extremely difficult. 
+	\item Some lines have gaps in between them. I'm working on it. 
+	\item The dots are letters to still be made. 
+	\item If you have any remarks, you can message them to me, or tell me next week.
+	\item For those interested, I have a Github page for this project. 
+\end{itemize}
+
 
 \end{document}
