@@ -49,17 +49,31 @@
 \def\HypoBottomRight{(CenterRight) -- (CenterCellar);}
 \def\HypoUpperLeft{(CenterLeft) -- (CenterCeiling);}
 \def\HypoUpperRight{(CenterRight) -- (CenterCeiling);}
+
 \def\BigHypoUpperLeft{(CenterLeft)--(UpperRight);}
 \def\BigHypoUpperRight{(CenterRight) -- (UpperLeft);}
+
 \def\LeftBigHypoUpperLeft{(CenterLeft) -- (CenterUpper);}
 \def\RightBigHypoUpperLeft{(CenterUpper) -- (UpperRight);}
+
 \def\RightBigHypoUpperRight{(CenterRight) -- (CenterUpper);}
 \def\LeftBigHypoUpperRight{(CenterUpper) -- (UpperLeft);}
 
+\def\BigHypoCenterLeft{(CenterBottomLeft) -- (CenterUpperRight);}
+
+\def\LeftBigHypoCenterLeft{(CenterBottomLeft) -- (Center);}
+\def\LeftBigHypoCenterLeft{(Center) -- (CenterUpperRight);}
+
+\def\BigHypoCenterRight{(CenterBottomRight) -- (CenterUpperLeft);}
+\def\LeftBigHypoCenterRight{(CenterBottomRight) -- (Center);}
+\def\RightBigHypoCenterRight{(Center) -- (CenterUpperLeft);}
+
 \def\BigHypoBottomLeft{(BottomLeft) -- (CenterRight);}
 \def\BigHypoBottomRight{(BottomRight) -- (CenterLeft);}
+
 \def\LeftBigHypoBottomLeft{(BottomLeft) -- (CenterBottom);}
 \def\RightBigHypoBottomLeft{(CenterBottom) -- (CenterRight);}
+
 \def\RightBigHypoBottomRight{(BottomRight) -- (CenterBottom);}
 \def\LeftBigHypoBottomRight{(CenterBottom) -- (CenterLeft);}
 
@@ -69,6 +83,28 @@
 
 \def\LeftHypoHeaven{(CenterCeiling) -- (LeftHeaven);}
 \def\RightHypoHeaven{(CenterCeiling) -- (RightHeaven);}
+
+
+\def\BigHypoHellLeft{(HellLeft) -- (CenterBottomRight);}
+\def\LeftBigHypoHellLeft{(HellLeft) -- (CenterCellar);}
+\def\RightBigHypoHellLeft{(CenterCellar) -- (CenterBottomRight);}
+
+\def\BigHypoHellRight{(HellRight) -- (CenterBottomLeft);}
+\def\LeftBigHypoHellRight{(HellRight) -- (CenterCellar);}
+\def\RightBigHypoHellRight{(CenterCellar) -- (CenterBottomLeft);}
+
+\def\BigLowerHypoHellLeft{(CenterHell) -- (OuterLowerRight);}
+\def\LeftLowerHypoHellLeft{(BottomRight) -- (CenterHell);}
+\def\RightLowerHypoHellLeft{(CenterHell) -- (OuterLowerRight);}
+
+
+\def\RightUpperInnerDiagonal{(QUpperRight) -- (QCenterLeft);}
+\def\RightBottomInnerDiagonal{(QCenterRight) -- (QBottomLeft);}
+
+\def\LeftUpperInnerDiagonal{(QUpperLeft) -- (QCenterRight);}
+\def\LeftBottomInnerDiagonal{(QCenterLeft) -- (QBottomRight);}
+
+
 % - Diagonal strokes - From left to TopHorizontal
 \def\RightCenterDiagonal{(BottomLeft) -- (CenterCeiling);}
 \def\LeftCenterDiagonal{(BottomRight) -- (CenterCeiling);}
@@ -90,10 +126,13 @@
 % - Curves
 
 \def\BigCurveUpperLeft{(CenterLeft) .. controls (Center) .. (UpperRight);}
+\def\BigCurveUpperRight{(CenterRight) .. controls (Center) .. (UpperLeft);}
 
 
 \def\CurveUpperLeft{(CenterCeiling) .. controls (Center) .. (CenterLeft);}
 \def\CurveUpperRight{(CenterCeiling) .. controls (Center) .. (CenterRight);}
+\def\CurveBottomLeft{(CenterCellar) .. controls (Center) .. (CenterLeft);}
+\def\CurveUpperRight{(CenterCellar) .. controls (Center) .. (CenterRight);}
 
 \def\BigCurveBottomLeft{(BottomLeft) .. controls (BottomRight) .. (CenterRight);}
 \def\BigCurveBottomRight{(BottomRight) .. controls (BottomLeft) .. (CenterLeft);}

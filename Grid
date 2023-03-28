@@ -18,6 +18,11 @@
     %Quarter-coordinates
     \node(QUpperLeft) at (1.875,7.5 ){}; 
     \node(QUpperRight) at (5.625, 7.5){};
+    \node(QCenterRight) at (5.625, 3.75){};
+    \node(QCenterLeft) at (1.875, 5){};
+    \node(QBottomLeft) at (1.875, 2.5){};
+    \node(QBottomRight) at (5.625,2.5){};
+    
     %Left-outward nodes
     \node(OuterTopLeft) at (-3.75, 10){};
     \node(OuterUpperLeft) at (-3.75,7.5){};
@@ -26,6 +31,7 @@
     %Right-outward nodes
     \node(OuterTopRight) at (11.25,10){};
     \node(OuterCenterRight) at (11.25,5){};
+    \node(OuterLowerRight) at (11.25, 2.5){};
     \node(OuterBottomRight) at (11.25,0){};
     \node(OuterUpperRight) at (11.25,7.5){};
     %Upper-outward nodes
@@ -33,10 +39,10 @@
     \node(OuterRightHeaven) at (11.25, 12.5){};
     \node(LeftHeaven) at (0, 12.5){};
     \node(OuterLeftHeaven) at (-3.75, 12.5){};
-    \node(CenterHeaven) at (5, 12.5){};
+    \node(CenterHeaven) at (3.75, 12.5){};
     %Down-outward nodes
     \node(RightHell) at (7.5, -2.5){};
-    \node(CenterHell) at (5, -2.5){};
+    \node(CenterHell) at (3.75, -2.5){};
     \node(LeftHell) at (0, -2.5){};
 	}
 }
