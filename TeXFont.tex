@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tikz}
+\usepackage{calculator}
 \usepackage[tmargin=30pt]{geometry}
 \usepackage[t,lf]{spectral}
 \usepackage[T1]{fontenc}
@@ -143,8 +144,53 @@
 \DeclareLetter{\CenterVertical}{\BigHypoCenterRight}
 \DeclareLetter{\CenterVertical}{\BigHypoCenterRight}
 
-\DeclareLetter{\CenterBottomVertical}{\BigCurveUpperRight}
-\DeclareLetter{\CenterBottomVertical}{\Cup{CenterUpper}}
+\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterUpper}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{3.75, 6.125}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterCellar}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapRight{Center}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCapRight{Center}}
+%\DeclareLetter{\CenterBottomVertical}{}
+
+%Rightslantingcaps
+\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterUpper}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{Center}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterCellar}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{Center}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{Center}}
+
+%Cupsnormal
+\DeclareLetter{\CenterBottomVertical}{\BigCup{(3.75, 11.125}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCup{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCup{3.75,6.125}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCup{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCup{3.75,3.75}}
+\DeclareLetter{\CenterBottomVertical}{\RightCup{3.75,6.125}}
+\DeclareLetter{\CenterBottomVertical}{\RightCup{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\RightCup{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCup{CenterUpper}}
+
+%Left-slanted cups
+\DeclareLetter{\CenterBottomVertical}{\BigCupLeft{(3.75, 11.125}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{3.75,6.125}}
+\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCupLeft{3.75,3.75}}
+\DeclareLetter{\CenterBottomVertical}{\RightCupRight{3.75,6.125}}
+\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterCeiling}}
+\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterBottom}}
+\DeclareLetter{\CenterBottomVertical}{\BigCupLeft{CenterUpper}}
+\
+%\DeclareLetter{\CenterBottomVertical}{\Cup{CenterUpper}}
 
 
 
@@ -166,10 +212,43 @@
 \DeclareLetter{\RightBottomInnerDiagonal}{\LeftCenterUpperDiagonal}
 \DeclareLetter{\LeftLowerHypoHellLeft}{\LeftCenterUpperDiagonal}
 \DeclareLetter{\BigLowerHypoHellLeft}{\LeftCenterUpperDiagonal}
+\DeclareLetter{\LeftCenterUpperDiagonal}{(BottomLeft) -- (OuterLowerRight);}
+\DeclareLetter{\LeftCenterUpperDiagonal}{(3.75,4) -- (7, 6.125);}
+\DeclareLetter{\LeftCenterUpperDiagonal}{(QUpperLeft) -- (CenterCeiling);}
+\DeclareLetter{\LeftCenterUpperDiagonal}{(QBottomLeft) -- ($(QBottomLeft) + (3,3)$);}
+\DeclareLetter{\RightCenterUpperDiagonal}{(QUpperLeft) -- ($(-3,-3) + (QUpperLeft)$);}
+
+%To the right slanted caps
+
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCapRight{3.65, 5.75}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCapRight{3.85, 7.35}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCapRight{2.75,5}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCap{BottomLeft}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCap{0.5,-0.75}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCapRight{BottomLeft}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCapRight{1.75,3}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCapRight{3.65,7.35}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCapLeft{2.25,2.5}}
+..
+
+%More right-slanted caps
+
+\DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}
+\DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}
+\DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}
+\DeclareLetter{\BLCUR}{\LeftCapLeft{0.5, 0}}
+\DeclareLetter{\BLCUR}{\BigCapLeft{0.25, -1.5}}
+\DeclareLetter{\BLCUR}{\RightCapLeft{BottomLeft}}
+\DeclareLetter{\BLCUR}{\RightCapLeft{3.5,3.5}}
+\DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}
+\DeclareLetter{\BLCUR}{\BigCapLeft{4, 2.5}}
+
+
 
 
 \vspace{2cm}
 
 
+\DeclareLetter{\CurveTemp}{\BottomHorizontal}
 
 \end{document}

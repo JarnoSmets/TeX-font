@@ -32,6 +32,10 @@
 \def\RightBottomHorizontal{(OuterBottomRight) -- (CenterCellar);}
 \def\LeftRightBottomHorizontal{(BottomRight) -- (CenterCellar);}
 
+	%Hell
+	
+\def\HellHorizontal{(LeftHell) -- (RightHell);}
+
 %Vertical Strokes
 \def\LV{(BottomLeft) -- (UpperLeft)}
 \def\LeftVertical{(BottomLeft) -- (UpperLeft)}
@@ -112,6 +116,13 @@
 \def\LeftCenterUpperDiagonal{(BottomRight) -- (CenterUpper);}
 \def\RightCenterUpperDiagonal{(BottomLeft) -- (CenterUpper);}
 
+
+% - Diagonal strokes - bottomleft to CUR and BR to CUL
+
+\def\BLCUR{(BottomLeft) -- (CenterUpperRight);}
+\def\BRCUL{(BottomRight) -- (CenterUpperLeft);}
+
+
 % - Arches
 \def\ArchBottomLeft{(CenterUpperLeft) .. controls (CenterUpper) .. (CenterCellar);}
 \def\ArchBottomRight{(CenterUpperRight) .. controls (CenterUpper) ..  (CenterCellar);}
@@ -147,6 +158,9 @@
 \def\BigCurveUpperRight{(CenterUpperLeft) .. controls (CenterCeiling) .. (UpperRight);}
 \def\LeftCurveUpperRight{(CenterUpperLeft) .. controls (UpperLeft) .. (CenterUpper);}
 
+
+\def\CurveTemp{(UpperLeft) .. controls (CenterBottomLeft) .. (CenterBottomRight);}
+
 %% Dot and Torus
 
 %Dot
@@ -158,6 +172,51 @@
 
 %Cup
 
-\def\Cup#1{($(#1) +(-2,4)$) .. controls ($(#1) + (0,2)$) .. ($(#1)+(2,4)$); }
+%\def\Cup#1{($(#1) +(-2,4)$) .. controls ($(#1) + (0,2)$) .. ($(#1)+(2,4)$); }
+
+
+%\def\Cap#1{($(#1) +(2,-2)$) .. controls (#1) .. ($(#1)+(-2,-2)$); }
+%\def\CapLeft#1{($(#1) +(2.6,-1)$) .. controls (#1) .. ($(#1)+(-1,-2.6)$); }
+%\def\CapRight#1{($(#1) +(1,-2.6)$) .. controls (#1) .. ($(#1)+(-2.6,-1)$); }
+%\def\Cap#1{($(#1) +(3,-1.5)$) .. controls (#1) .. ($(#1)+(-3,-1.5)$); }
+%\def\CapLeft#1{($(#1) +(3,0.5)$) .. controls ($(#1) + (0,0.5) $) .. ($(#1)+(-3,-0.5)$); }
+%\def\CapRight#1{($(#1) +(-3,0.5)$) .. controls ($(#1) + (0,0.5)$) .. ($(#1)+(3,-0.5)$); }
+
+
+
+\def\BigCup#1{[black] ($(#1) + (-3, 0)$) to [bend left =-50] ($(#1) + (3,0)$);}
+\def\BigCupLeft#1{[black] ($(#1) + (-3, -0.5)$) to [bend left =-50] ($(#1) + (3,1.5)$);}
+\def\BigCupRight#1{[black] ($(#1) + (-3, 1.5)$) to [bend left =-50] ($(#1) + (3,-0.5)$);}
+
+\def\BigCap#1{[black] ($(#1) + (-3, 0)$) to [bend left =50] ($(#1) + (3,0)$);}
+\def\BigCapRight#1{[black] ($(#1) + (-3, -0.5)$) to [bend left =50] ($(#1) + (3,1.5)$);}
+\def\BigCapLeft#1{[black] ($(#1) + (-3, 1.5)$) to [bend left =50] ($(#1) + (3,-0.5)$);}
+
+\def\RightCap#1{[black] (#1)  to [bend left =50] ($(#1) + (3,0)$);}
+
+\def\LeftCap#1{[black] (#1)  to [bend left =-50] ($(#1) + (-3,0)$);}
+
+\def\RightCapLeft#1{[black] (#1)  to [bend left =50] ($(#1) + (3,-0.5)$);}
+\def\LeftCapLeft#1{[black] (#1)  to [bend left =-50] ($(#1) + (-3,1.5)$);}
+\def\LeftCapRight#1{[black] (#1)  to [bend left =-50] ($(#1) + (-3,-1.5)$);}
+\def\RightCapRight#1{[black] (#1)  to [bend left =50] ($(#1) + (3,0.5)$);}
+
+\def\RightCupLeft#1{[black] (#1)  to [bend left =-50] ($(#1) + (3,-0.5)$);}
+\def\LeftCupLeft#1{[black] (#1)  to [bend left =50] ($(#1) + (-3,1.5)$);}
+\def\LeftCupRight#1{[black] (#1)  to [bend left =50] ($(#1) + (-3,-1.5)$);}
+\def\RightCupRight#1{[black] (#1)  to [bend left =-50] ($(#1) + (3,0.5)$);}
+
+\def\RightCup#1{[black] (#1)  to [bend left =-50] ($(#1) + (3,0)$);}
+
+\def\LeftCup#1{[black] (#1)  to [bend left =50] ($(#1) + (-3,0)$);}
+
+
+
+
+%\def\Cup#1{($(#1) +(-2,2)$) .. controls (#1) .. ($(#1)+(2,2)$); }
+%\def\CupLeft#1{($(#1) +(-2.6,1)$) .. controls (#1) .. ($(#1)+(1,2.6)$); }
+%\def\CupRight#1{($(#1) +(-1,2.6)$) .. controls (#1) .. ($(#1)+(2.6,1)$); }
+
+
 
 %\def\Cup#1{((#1) ++ (-2,2)) .. controls (#1) .. ((#1)++(2,2)) }
