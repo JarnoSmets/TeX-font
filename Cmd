@@ -7,6 +7,19 @@
 				\def\CH{(CenterLeft) -- (CenterRight)}
 				\draw[line width = \thickness] #1;
 				\draw[line width = \thickness] #2;
+				
+        		\end{tikzpicture}
+		}
+}
+
+\def\DeclareStroke#1{%
+	\def\corpsgrootte{20pt}
+		\resizebox{\corpsgrootte}{!}{
+        		\begin{tikzpicture}
+            			\pic{grid};
+				\def\LV{(BottomLeft) -- (UpperLeft)}
+				\def\CH{(CenterLeft) -- (CenterRight)}
+				\draw[line width = \thickness] #1;
         		\end{tikzpicture}
 		}
 }

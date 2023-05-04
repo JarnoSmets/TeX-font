@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tikz}
+\usepackage{pdflscape}
 \usepackage{calculator}
 \usepackage[tmargin=30pt]{geometry}
 \usepackage[t,lf]{spectral}
@@ -23,7 +24,13 @@
 %\renewcommand{\corpsgrootte}{12pt}
 
 %%%%%%%%%%%%%%%%%%%%%%
-\large Dit is test text. Even kijken of dit font erbij past. Lallala, ik type en ik type. Het houdt niet op. 
+\large Dit is test text. Even kijken of dit font erbij past. A B C D E. 
+\def\Ka{\lower.3em\hbox{\DeclareLetter{\LV}{\CH}}}
+\Ka
+%\DeclareLetter{\LV}{\TopHorizontal}
+%\DeclareLetter{\RightVertical}{\TopHorizontal}
+
+1
 \DeclareLetter{\LV}{\CH}
 \DeclareLetter{\LV}{\TopHorizontal}
 \DeclareLetter{\RightVertical}{\TopHorizontal}
@@ -36,7 +43,7 @@
 \DeclareLetter{\CenterVertical}{\CenterHorizontal}
 
 %Slanted row
-
+2
 \DeclareLetter{\RightCenterDiagonal}{\TopHorizontal}
 \DeclareLetter{\RightCenterDiagonal}{\LeftTopHorizontal}
 \DeclareLetter{\RightCenterDiagonal}{\LeftCenterHorizontal}
@@ -47,7 +54,7 @@
 \DeclareLetter{\RightCenterDiagonal}{\CenterHorizontal}
 
 %Left-slanting row
-
+3
 \DeclareLetter{\LeftCenterDiagonal}{\TopHorizontal}
 \DeclareLetter{\LeftCenterDiagonal}{\RightTopHorizontal}
 \DeclareLetter{\LeftCenterDiagonal}{\RightCenterHorizontal}
@@ -58,6 +65,7 @@
 \DeclareLetter{\LeftCenterDiagonal}{\CenterHorizontal}
 
 %Arches?
+4
 \DeclareLetter{\ArchBottomRight}{\UpperHorizontal}
 \DeclareLetter{\ArchBottomRight}{\QRightUpperHorizontal}
 \DeclareLetter{\ArchBottomRight}{\LeftLowerHorizontal}
@@ -71,7 +79,7 @@
 ...
 
 %Arches - 2nd row
-
+5
 \DeclareLetter{\ArchBottomLeft}{\UpperHorizontal}
 \DeclareLetter{\ArchBottomLeft}{\QLeftUpperHorizontal}
 \DeclareLetter{\ArchBottomLeft}{\RightLowerHorizontal}
@@ -84,6 +92,7 @@
 ..
 ...
 
+6
 \DeclareLetter{\RampBottomRight}{\UpperHorizontal}
 \DeclareLetter{\RampBottomRight}{\QLeftUpperHorizontal}
 \DeclareLetter{\RampBottomRight}{\LeftLowerHorizontal}
@@ -96,6 +105,7 @@
 ..
 ...
 
+7
 \DeclareLetter{\RampBottomLeft}{\UpperHorizontal}
 \DeclareLetter{\RampBottomLeft}{\QLeftUpperHorizontal}
 \DeclareLetter{\RampBottomLeft}{\LeftLowerHorizontal}
@@ -109,6 +119,7 @@
 ...
 
 %Dots
+8
 \DeclareLetter{\CenterHorizontal}{\Dot{CenterUpper}}
 \DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperLeft}}
 \DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterLeft}}
@@ -120,7 +131,7 @@
 \DeclareLetter{\CenterHorizontal}{\Dot{Center}}
 
 %Hypos
-
+9
 \DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}
 \DeclareLetter{\CenterVertical}{\HypoUpperLeft}
 \DeclareLetter{\CenterVertical}{\LeftBigHypoUpperLeft}
@@ -133,6 +144,7 @@
 \DeclareLetter{\CenterVertical}{\BigHypoCenterLeft}
 ...
 
+10
 \DeclareLetter{\CenterUpperVertical}{\BigHypoUpperRight}
 \DeclareLetter{\CenterVertical}{\HypoUpperRight}
 \DeclareLetter{\CenterVertical}{\LeftBigHypoUpperRight}
@@ -144,6 +156,7 @@
 \DeclareLetter{\CenterVertical}{\BigHypoCenterRight}
 \DeclareLetter{\CenterVertical}{\BigHypoCenterRight}
 
+11
 \DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterUpper}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterCeiling}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCapRight{3.75, 6.125}}
@@ -157,6 +170,7 @@
 %\DeclareLetter{\CenterBottomVertical}{}
 
 %Rightslantingcaps
+12
 \DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterUpper}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterCeiling}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{Center}}
@@ -169,6 +183,7 @@
 \DeclareLetter{\CenterBottomVertical}{\BigCapLeft{Center}}
 
 %Cupsnormal
+13
 \DeclareLetter{\CenterBottomVertical}{\BigCup{(3.75, 11.125}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCup{CenterCeiling}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCup{3.75,6.125}}
@@ -180,6 +195,7 @@
 \DeclareLetter{\CenterBottomVertical}{\BigCup{CenterUpper}}
 
 %Left-slanted cups
+14
 \DeclareLetter{\CenterBottomVertical}{\BigCupLeft{(3.75, 11.125}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterCeiling}}
 \DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{3.75,6.125}}
@@ -195,7 +211,7 @@
 
 
 %Vertcir
-
+15
 \DeclareLetter{\CenterVertical}{\Dot{CenterHeaven}}
 \DeclareLetter{\CenterVertical}{\Dot{UpperLeft}}
 \DeclareLetter{\CenterVertical}{\Dot{CenterBottomLeft}}
@@ -207,6 +223,7 @@
 \DeclareLetter{\CenterVertical}{\Dot{Center}}
 ...
 
+16
 \DeclareLetter{\BigHypoUpperLeft}{\LeftCenterUpperDiagonal}
 \DeclareLetter{\LeftBigHypoUpperLeft}{\LeftCenterUpperDiagonal}
 \DeclareLetter{\RightBottomInnerDiagonal}{\LeftCenterUpperDiagonal}
@@ -219,7 +236,7 @@
 \DeclareLetter{\RightCenterUpperDiagonal}{(QUpperLeft) -- ($(-3,-3) + (QUpperLeft)$);}
 
 %To the right slanted caps
-
+17
 \DeclareLetter{\RightCenterUpperDiagonal}{\BigCapRight{3.65, 5.75}}
 \DeclareLetter{\RightCenterUpperDiagonal}{\LeftCapRight{3.85, 7.35}}
 \DeclareLetter{\RightCenterUpperDiagonal}{\LeftCapRight{2.75,5}}
@@ -232,7 +249,7 @@
 ..
 
 %More right-slanted caps
-
+18
 \DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}
 \DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}
 \DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}
@@ -243,12 +260,246 @@
 \DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}
 \DeclareLetter{\BLCUR}{\BigCapLeft{4, 2.5}}
 
+19
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCupRight{3.85,8}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCupRight{CenterUpper}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCupRight{2.5,5}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCup{0.25,0.5}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCupRight{0,1}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCupRight{0,1}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCupRight{1.75,3}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCupRight{3.65,7.35}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCupRight{2.25,4}}
+...
+
+%Leftcuprow
+20
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCupLeft{3.25, 8}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCupLeft{CenterUpper}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCupLeft{2.5,5}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\LeftCupLeft{0.25,0.5}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCupLeft{0.25,1}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCupLeft{0,1}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCupLeft{1.75,3}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\RightCupLeft{3.65,7.35}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\BigCupLeft{1.5,4}}
+...
+
+%Slanted dots
+21
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{5,10}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{CenterUpperLeft}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{CenterLeft}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{OuterBottomLeft}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{-1,-2}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{CenterCellar}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{CenterRight}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{CenterUpperRight}}
+\DeclareLetter{\RightCenterUpperDiagonal}{\Dot{1.75,3.5}}
+...
+
+%Leftward slanted caps
+22
+
+\DeclareLetter{\LeftCenterUpperDiagonal}{\BigCapRight{4.75,5.75}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\LeftCapRight{4,7.25}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\LeftCapRight{5.5,3.5}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\LeftCapRight{7.75,0}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\BigCapRight{7.75,-1.5}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\RightCapRight{7.5,0}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\RightCapRight{5.25, 3.5}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\RightCapRight{3.5,7}}
+\DeclareLetter{\LeftCenterUpperDiagonal}{\BigCapRight{6.25, 2.5}}
+
 
 
 
 \vspace{2cm}
 
 
+
+
+
 \DeclareLetter{\CurveTemp}{\BottomHorizontal}
 
+
+
+\pagebreak
+\begin{landscape}
+
+	\def\emty{\DeclareLetter{\RightDiagonal}{\BigCircle}}
+	\DeclareLetter{\RightDiagonal}{\BigCircle}
+	...
+	\DeclareLetter{\CenterVertical}{\Dot{CenterCeiling}}
+	\DeclareLetter{\CenterVertical}{\Dot{3.5,10}}
+	\DeclareLetter{\CenterVertical}{\Dot{3.5,5}}
+	\DeclareLetter{\CenterVertical}{\Dot{3.5,0.5}}
+	...	
+	
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\CenterVertical}
+	\DeclareLetter{(CenterCeiling) -- (CenterUpper)}{(CenterBottom) -- (CenterCellar)}
+	\DeclareLetter{\CenterVertical}{\VS{3.25,10}}
+	\DeclareLetter{\CenterVertical}{\VS{3.25,5}}
+	\DeclareLetter{\CenterVertical}{\VS{3.25,0.5}}
+	...
+        \DeclareStroke{\CenterVertical}
+	\DeclareStroke{\RightDiagonal}
+	---
+	\DeclareLetter{\BottomHorizontal}{\CenterVertical}
+	\DeclareLetter{\LV}{\TopHorizontal}
+	\DeclareLetter{\LeftVertical}{\CenterHorizontal}
+	\DeclareLetter{\BottomHorizontal}{\LeftVertical}
+        ...
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomLeft}
+	\DeclareLetter{\CenterVertical}{\RightHypoHeaven}
+	\DeclareLetter{\CenterVertical}{\RightBigHypoUpperLeft}
+	\DeclareLetter{\CenterBottomVertical}{\RightBigHypoBottomLeft}
+	...
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\ArchBottomLeft}
+	\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterCellar}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterCeiling}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{Center}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterBottom}}
+	...
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\ArchBottomRight}
+	\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterCellar}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterCeiling}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{Center}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterBottom}}
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\RampBottomLeft}
+	...
+	\DeclareLetter{\CenterBottomVertical}{\RightCup{CenterCeiling}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCup{3.75,6.125}}
+	\DeclareLetter{\CenterBottomVertical}{\BigCup{3.75,3.75}}
+	...
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\RampBottomRight}
+	\DeclareLetter{\CenterBottomVertical}{\BigCupLeft{3.75,3.75}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{3.75,6.125}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterCeiling}}
+	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterBottom}}
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\Dot{Center}}
+	\DeclareLetter{\CenterVertical}{\Dot{CenterHell}} 
+	\DeclareLetter{\CenterVertical}{\Dot{UpperRight}}
+	\DeclareLetter{\CenterVertical}{\Dot{CenterRight}}
+	\DeclareLetter{\CenterVertical}{\Dot{BottomRight}}
+	\DeclareLetter{\CenterVertical}{\Dot{Center}}
+
+	\def\broad{(OuterCenterLeft) -- (OuterCenterRight)}
+	\emty
+	\DeclareStroke{\broad}
+	\DeclareLetter{\broad}{\MediumCircle{OuterCenterLeft}}
+	\DeclareLetter{\broad}{\MediumCircle{0.5,5.5}}
+	\DeclareLetter{\broad}{\MediumCircle{3.75,5.5}}
+	\DeclareLetter{\broad}{\MediumCircle{7.5,5.5}}
+	...
+	
+	\DeclareStroke{\broad}
+	\DeclareStroke{\broad}
+	\DeclareLetter{\broad}{\HS{-2.25,5.5}}
+	\DeclareLetter{\broad}{\HS{Center}}
+	\DeclareLetter{\broad}{\HS{8.625, 5.5}}
+	...
+
+
+	\DeclareStroke{\broad}
+	\DeclareStroke{\RightDiagonal}
+	...
+	...
+	...
+	...
+	...
+
+	\DeclareStroke{\broad}
+	\DeclareStroke{\LeftDiagonal}
+	...
+	...
+	...
+	...
+	...
+
+	\DeclareStroke{\broad}
+	\DeclareStroke{\ArchBottomRight}
+	\DeclareLetter{\CurveLR}{\TopHorizontal}
+	\DeclareLetter{\CurveLR}{\UpperHorizontal}
+	...
+	\DeclareLetter{\CurveLR}{(BottomLeft) -- (OuterBottomLeft)}
+	...
+
+	\DeclareStroke{\broad}
+	\DeclareStroke{\CurveRL}
+	\DeclareLetter{\CurveRL}{\TopHorizontal}
+	...
+	...
+	\DeclareLetter{\ArchBottomLeft}{\RightLeftBottomHorizontal}
+	...
+
+	
+	\DeclareStroke{\broad}
+	\DeclareStroke{\RampBottomRight}
+	\DeclareLetter{\RampBottomRight}{\UpperHorizontal}
+	\DeclareLetter{\RampBottomRight}{\QLeftUpperHorizontal}
+	\DeclareLetter{\RampBottomRight}{\LeftLowerHorizontal}
+	...
+
+	\DeclareStroke{\broad}
+	\DeclareStroke{\RampBottomLeft}
+	\DeclareLetter{\RampBottomLeft}{\UpperHorizontal}
+	\DeclareLetter{\RampBottomLeft}{\QLeftUpperHorizontal}
+	\DeclareLetter{\RampBottomLeft}{\LeftLowerHorizontal}
+	...
+
+	\DeclareStroke{\broad}
+	\DeclareStroke{\Dot{Center}}
+	\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterRight}}
+	\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomLeft}}
+	\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottom}}
+	\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomRight}}
+	\DeclareLetter{\CenterHorizontal}{\Dot{Center}}
+
+	\emty
+	\DeclareStroke{\RightCenterUpperDiagonal}
+	\DeclareLetter{\RightCenterUpperDiagonal}{\MediumCircle{CenterUpperRight}}
+	\DeclareLetter{\RightCenterUpperDiagonal}{\MediumCircle{3.25,7.5}}
+	\DeclareLetter{\RightCenterUpperDiagonal}{\MediumCircle{CenterLeft}}
+	\DeclareLetter{\RightCenterUpperDiagonal}{\MediumCircle{BottomLeft}}
+	
+	\DeclareStroke{\RightCenterUpperDiagonal}
+	\DeclareStroke{\RightCenterUpperDiagonal}
+	\DeclareLetter{(BottomLeft) -- (1.75,3.5)}{(2,4) -- (CenterUpper)}
+	\DeclareLetter{\RightCenterUpperDiagonal}{(0.5,6) -- (1.75,8.5)}
+	\DeclareLetter{\RightCenterUpperDiagonal}{(0.5,6) -- (-0.75, 3.5)}
+	\DeclareLetter{\RightCenterUpperDiagonal}{(-0.75,3.5) -- (-1.8, 1)}
+	...
+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\LeftDiagonal}
+	...
+	...
+	...
+	...
+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\ArchBottomRight}
+
+	\DeclareLetter{(CenterBottom) -- (UpperRight)}{\BigCapRight{CenterBottom}}
+	\DeclareLetter{\RightCenterUpperDiagonal}{(3.5,7) to [bend left = 60] (5.625,10)}
+	\DeclareLetter{\RightCenterUpperDiagonal}{(2.25,1.5) to [bend left = 60] (3.5,4.25)}
+	\DeclareLetter{\RightCenterUpperDiagonal}{(1.25,0.25) to [bend left =60] (2.75,2.5)}
+	...
+
+\end{landscape}
 \end{document}
