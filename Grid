@@ -27,6 +27,7 @@
     \node(OuterTopLeft) at (-3.75, 10){};
     \node(OuterUpperLeft) at (-3.75,7.5){};
     \node(OuterCenterLeft) at (-3.75, 5){};
+    \node(OuterLowerLeft) at (-3.75,2.5){};
     \node(OuterBottomLeft) at (-3.75, 0){};
     %Right-outward nodes
     \node(OuterTopRight) at (11.25,10){};

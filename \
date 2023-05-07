@@ -326,17 +326,8 @@
 
 \pagebreak
 \begin{landscape}
+
 	\def\emty{\DeclareLetter{\RightDiagonal}{\BigCircle}}
-	
-	\emty
-	\emty
-	\DeclareStroke{(CenterUpperLeft) .. controls (-3.75,-2.5) and (11.25,-2.5) .. (CenterUpperRight)}
-	\DeclareStroke{(-3.75,1.25) .. controls (6.25,-2.5) and (6.25,12.5) .. (-3.75,8.625)}
-	\DeclareStroke{(BottomLeft) .. controls (OuterTopLeft) and (OuterTopRight) .. (BottomRight)}
-	\DeclareStroke{(11.25,1.25) .. controls (1.25,-2.5) and (1.25,12.5) .. (11.25,8.625)}
-	\DeclareStroke{(Center) circle (3.25)}
-
-
 	\DeclareLetter{\RightDiagonal}{\BigCircle}
 	...
 	\DeclareLetter{\CenterVertical}{\Dot{CenterCeiling}}
@@ -368,7 +359,7 @@
 	+
 	\DeclareStroke{\CenterHorizontal}
 	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterVertical}{\TopHorizontal}
+	\DeclareLetter{\CenterVertical}{\TopVertical}
 	\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (UpperLeft)}
 	\DeclareLetter{\CenterVertical}{\LeftCenterHorizontal}
 	\DeclareLetter{\CenterVertical}{\LeftBottomHorizontal}
@@ -389,22 +380,6 @@
 	\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}
 	...
 
-	\DeclareStroke{\CenterVertical}
-	\DeclareStroke{\RightDiagonal}
-	...
-	...
-	...
-	...
-	...
-	+
-	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}
-	\DeclareLetter{\CenterVertical}{\HypoUpperLeft}
-	\DeclareLetter{\CenterVertical}{\LeftBigHypoUpperLeft}
-	\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}
-
-
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\ArchBottomLeft}
@@ -413,14 +388,6 @@
 	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{Center}}
 	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterBottom}}
 	...
-	+
-	\DeclareStroke{\ArchBottomLeft}
-	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterUpper}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{3.75, 6.125}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterBottom}}
-	...
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\ArchBottomRight}
@@ -428,14 +395,6 @@
 	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterCeiling}}
 	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{Center}}
 	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterBottom}}
-	+
-	\DeclareStroke{\ArchBottomRight}
-	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterUpper}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{Center}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterBottom}}
-	...
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\RampBottomLeft}
@@ -444,12 +403,6 @@
 	\DeclareLetter{\CenterBottomVertical}{\RightCup{3.75,6.125}}
 	\DeclareLetter{\CenterBottomVertical}{\BigCup{3.75,3.75}}
 	...
-	+
-	\DeclareLetter{\CenterBottomVertical}{\BigCupRight{3.75,11.125}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{3.75,6.125}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterBottom}}
-	...
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\RampBottomRight}
@@ -457,14 +410,6 @@
 	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{3.75,6.125}}
 	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterCeiling}}
 	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterBottom}}
-	+
-	\DeclareStroke{\RampBottomRight}
-	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterUpperVertical}{\BigCupLeft{3.5,8.25}}
-	\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{3.75,6.125}}
-	\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{Center}}
-	\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{3.75,1}}
-	...
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\Dot{Center}}
@@ -473,14 +418,6 @@
 	\DeclareLetter{\CenterVertical}{\Dot{CenterRight}}
 	\DeclareLetter{\CenterVertical}{\Dot{BottomRight}}
 	\DeclareLetter{\CenterVertical}{\Dot{Center}}
-	+
-	\DeclareStroke{\Dot{Center}}
-	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterVertical}{\Dot{CenterHeaven}}
-	\DeclareLetter{\CenterVertical}{\Dot{UpperLeft}}
-	\DeclareLetter{\CenterVertical}{\Dot{CenterBottomLeft}}
-	\DeclareLetter{\CenterVertical}{\Dot{BottomLeft}}
-...
 
 	\def\broad{(OuterCenterLeft) -- (OuterCenterRight)}
 	\emty
@@ -490,14 +427,6 @@
 	\DeclareLetter{\broad}{\MediumCircle{3.75,5.5}}
 	\DeclareLetter{\broad}{\MediumCircle{7.5,5.5}}
 	...
-	+
-	\emty
-	\DeclareStroke{\broad}
-	\DeclareLetter{\broad}{\MediumCircle{OuterCenterRight}}
-	\DeclareLetter{\broad}{\MediumCircle{0.5,4.5}}
-	\DeclareLetter{\broad}{\MediumCircle{3.75,4.5}}
-	\DeclareLetter{\broad}{\MediumCircle{7.5,4.5}}
-	\DeclareLetter{\broad}{\MediumCircle{Center}}
 	
 	\DeclareStroke{\broad}
 	\DeclareStroke{\broad}
@@ -509,135 +438,53 @@
 
 	\DeclareStroke{\broad}
 	\DeclareStroke{\RightDiagonal}
-	\def\RSD{(BottomLeft) -- (5.625,10)}
-	\DeclareLetter{\RSD}{\TopHorizontal}
-	\DeclareLetter{\RSD}{(5.625,10) -- (1.875,10)}
-	\DeclareLetter{\RSD}{(2.8,5) -- (-0.95,5)}
-	\DeclareLetter{\RSD}{(0,0) -- (-3.75,0)}
 	...
-	+
-	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\broad}
-	\DeclareLetter{\RSD}{\BottomHorizontal}
-	\DeclareLetter{\RSD}{(5.625,10) -- (9.375,10)}
-	\DeclareLetter{\RSD}{(2.8,5) -- (6.56,5)}
-	\DeclareLetter{\RSD}{(0,0) -- (3.75,0)}
 	...
-
-	
-
+	...
+	...
+	...
 
 	\DeclareStroke{\broad}
 	\DeclareStroke{\LeftDiagonal}
-	\def\LCD{(BottomRight) -- (1.875,10)}
-	\DeclareLetter{\LCD}{\TopHorizontal}
-	\DeclareLetter{\LCD}{(1.875,10) -- (-1.875,10)}
-	\DeclareLetter{\LCD}{(4.7,5) -- (0.95,5)}
-	\DeclareLetter{\LCD}{(7.5,0) -- (3.75,0)}
 	...
-	+
-	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\broad}
-	\DeclareLetter{\LCD}{\BottomHorizontal}
-	\DeclareLetter{\LCD}{(1.875,10) -- (5.625,10)}
-	\DeclareLetter{\LCD}{(4.7,5) -- (8.44,5)}
-	\DeclareLetter{\LCD}{(7.5,0) -- (11.25,0)}
 	...
-
+	...
+	...
+	...
 
 	\DeclareStroke{\broad}
 	\DeclareStroke{\ArchBottomRight}
-	\def\CurfLR{(BottomLeft) to [bend left = 70] (CenterUpperRight)}
-	\DeclareLetter{\CurfLR}{\TopHorizontal}
-	\DeclareLetter{\CurfLR}{(0,8) -- (7.5,8)}
-	\DeclareLetter{\CurfLR}{(1,5.5) -- (-2.75,5.5)}
-	\DeclareLetter{\CurfLR}{(BottomLeft) -- (OuterBottomLeft)}
+	\DeclareLetter{\CurveLR}{\TopHorizontal}
+	\DeclareLetter{\CurveLR}{\UpperHorizontal}
 	...
-	+
-	\DeclareStroke{\ArchBottomRight}
-	\DeclareStroke{\broad}
-	\DeclareLetter{\BottomHorizontal}{(CenterCellar) to [bend left = 70] (OuterUpperRight)}
-	\DeclareLetter{(3.25,2.5) -- (OuterLowerRight)}{(BottomLeft) .. controls (CenterBottomLeft) .. (CenterBottom)}
-	\DeclareLetter{\CurfLR}{(1,5.5) -- (5.25,5.5)}
-	\DeclareLetter{\CurfLR}{(BottomLeft) -- (BottomRight)}
+	\DeclareLetter{\CurveLR}{(BottomLeft) -- (OuterBottomLeft)}
 	...
 
-	%Duplicate mirror
+	\DeclareStroke{\broad}
+	\DeclareStroke{\CurveRL}
+	\DeclareLetter{\CurveRL}{\TopHorizontal}
+	...
+	...
+	\DeclareLetter{\ArchBottomLeft}{\LeftBottomHorizontal}
+	...
 
-	\DeclareStroke{\broad}
-	\DeclareStroke{\ArchBottomLeft}
-	\def\CurfRL{(BottomRight) to [bend left = -70] (CenterUpperLeft)}
-	\DeclareLetter{\CurfRL}{\TopHorizontal}
-	\DeclareLetter{(BottomRight) .. controls (CenterBottomRight) .. (CenterBottom)}{(4.25,2.5) -- (OuterLowerLeft)}
-	\DeclareLetter{\CurfRL}{(5.625,5) -- (1.875,5)}
-	\DeclareLetter{\CurfRL}{(BottomRight) -- (BottomLeft)}
-	...
-	+
-	\DeclareStroke{\ArchBottomRight}
-	\DeclareStroke{\broad}
-	\DeclareLetter{\BottomHorizontal}{(CenterCellar) to [bend left = -70] (OuterUpperLeft)}
-	\DeclareLetter{\CurfRL}{(0,8) -- (7.5,8)}
-	\DeclareLetter{\CurfRL}{(1,5.5) -- (5.25,5.5)}
-	\DeclareLetter{\CurfRL}{(BottomRight) -- (OuterBottomRight)}
-	...
 	
-	
-	\def\RampLR{(CenterUpperLeft) to [bend left = -70] (BottomRight)}
 	\DeclareStroke{\broad}
-	\DeclareStroke{\RampLR}
-	\DeclareLetter{\RampLR}{(OuterUpperLeft) -- (CenterUpper)}
-	\DeclareLetter{\RampLR}{(CenterUpperLeft) -- (OuterUpperLeft)}
-	\DeclareLetter{\RampLR}{(0.5,4) -- (-3.25, 4)}
-	\DeclareLetter{\RampLR}{(0,-0.5) -- (7.5,-0.5)}
-	...
-	+
-	\DeclareStroke{\RampLR}
-	\DeclareStroke{\broad}
-	\DeclareLetter{(UpperLeft) to [bend left = -70] (CenterBottomRight)}{\BottomHorizontal}
-	\DeclareLetter{\RampLR}{\UpperHorizontal}
-	\DeclareLetter{\RampLR}{(0.5,5) -- (4.25,5)}
-	\DeclareLetter{(CenterUpperLeft) .. controls (CenterLeft) .. (Center)}{(3.25,5) -- (OuterCenterRight)}
-	...
-
-
-
-	\def\RampRL{(CenterUpperRight) to [bend left = 70] (BottomLeft)}
-	\DeclareStroke{\broad}
-	\DeclareStroke{\RampRL}
-	\DeclareLetter{\RampRL}{(OuterUpperRight) -- (CenterUpper)}
-	\DeclareLetter{\RampRL}{(CenterUpperRight) -- (CenterUpperLeft)}
-	\DeclareLetter{\RampRL}{(2.5,4) -- (6.25, 4)}
-	\DeclareLetter{(OuterCenterLeft) -- (4.25,5)}{(Center) .. controls (CenterRight) .. (CenterUpperRight)}
-	...
-	+
 	\DeclareStroke{\RampBottomRight}
-	\DeclareStroke{\broad}
-	\DeclareLetter{(UpperRight) to [bend left = 70] (CenterBottomLeft)}{\BottomHorizontal}
-	\DeclareLetter{\RampRL}{(CenterUpperRight) -- (OuterUpperRight)}
-	\DeclareLetter{\RampRL}{(6.5,4) -- (10.25,4)}
-	\DeclareLetter{\RampRL}{(0,-0.5) -- (7.5,-0.5)}
+	\DeclareLetter{\RampBottomRight}{\UpperHorizontal}
+	\DeclareLetter{\RampBottomRight}{\QLeftUpperHorizontal}
+	\DeclareLetter{\RampBottomRight}{\LeftLowerHorizontal}
 	...
 
-	\DeclareStroke{\CenterHorizontal}
-	\DeclareStroke{\Dot{Center}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterRight}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomLeft}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottom}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomRight}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{Center}}
-	+
-	\DeclareStroke{\Dot{Center}}
-	\DeclareStroke{\CenterHorizontal}
-	\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterLeft}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperLeft}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpper}}
-	\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperRight}}
+	\DeclareStroke{\broad}
+	\DeclareStroke{\RampBottomLeft}
+	\DeclareLetter{\RampBottomLeft}{\UpperHorizontal}
+	\DeclareLetter{\RampBottomLeft}{\QLeftUpperHorizontal}
+	\DeclareLetter{\RampBottomLeft}{\LeftLowerHorizontal}
+	...
 
-	\def\RSDC{(BottomLeft) -- (5.625,7.5)}
-	\emty
-	\DeclareStroke{\RSDC}{\MediumCircle{UpperRight}}
-	\DeclareLetter{\RSDC}{\MediumCircle{5,7.5}}
-	\DeclareLetter{\RSDC}{\MediumCircle{...}
+	\DeclareStroke{\broad}
+	\DeclareStroke{\Dot{Center}}
 
 
 
