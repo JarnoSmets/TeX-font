@@ -4,8 +4,8 @@
 \usepackage{pdflscape}
 \usepackage{calculator}
 \usepackage[tmargin=30pt]{geometry}
-\usepackage[t,lf]{spectral}
-\usepackage[T1]{fontenc}
+%\usepackage[t,lf]{spectral}
+%\usepackage[T1]{fontenc}
 \usetikzlibrary{calc}
 \title{Conlang Glyphs}
 \author{The Conlangers}
@@ -635,10 +635,149 @@
 
 	\def\RSDC{(BottomLeft) -- (5.625,7.5)}
 	\emty
-	\DeclareStroke{\RSDC}{\MediumCircle{UpperRight}}
-	\DeclareLetter{\RSDC}{\MediumCircle{5,7.5}}
-	\DeclareLetter{\RSDC}{\MediumCircle{...}
+	\DeclareStroke{\RSDC}
+	\DeclareLetter{\RSDC}{\MediumCircle{7.30,8.75}}
+	\DeclareLetter{\RSDC}{\MediumCircle{3.75,8.17}}
+	\DeclareLetter{\RSDC}{\MediumCircle{1.15,4}}
+	\DeclareLetter{\RSDC}{\MediumCircle{-1.5,1}}
+	...
+	+
+	\DeclareStroke{\RSDC}
+	\emty
+	\DeclareLetter{\RSDC}{\MediumCircle{-0.5, -0.66}}
+	\DeclareLetter{\RSDC}{\MediumCircle{CenterUpperRight}}
+	\DeclareLetter{\RSDC}{\MediumCircle{4.5,3.5}}
+	\DeclareLetter{\RSDC}{\MediumCircle{2.25,0.5}}
+	\DeclareLetter{\RSDC}{\MediumCircle{2.8125,3.75}}
+	...
 
+	\DeclareStroke{\RSDC}
+	\DeclareStroke{\RSDC}
+	\DeclareLetter{\RightDiagonal}{(1.5,8) -- (3.37,9.5)}
+	\DeclareLetter{\RightDiagonal}{(-0.5475,5) -- (1.6825,8)}
+	\DeclareLetter{\RightDiagonal}{(-3.1875,1.5) -- (-0.9375,4.5)}
+	...
+	+
+	...
+	...
+	...
+	...
+	...
+	...
+	...
+
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareStroke{\RightDiagonal}
+	\def\BRCU{(BottomRight) -- (CenterUpper)}
+	\DeclareLetter{\BRCU}{(CenterLeft) -- (UpperRight)}
+	\DeclareLetter{\BRCU}{(CenterLeft) -- (CenterUpper)}
+	\DeclareLetter{\BRCU}{(5.5,4) -- (1.76,1.48)}
+	\DeclareLetter{\BRCU}{(BottomRight) -- (3.75,-2.5)}
+	...
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{(BottomLeft) -- (CenterRight)}
+	\def\URCB{(CenterUpper) -- (BottomLeft)}
+	\DeclareLetter{\URCB}{(CenterUpper) -- (UpperLeft)}
+	\DeclareLetter{\URCB}{(-1.75,6.5) -- (2,4)}
+	\DeclareLetter{\URCB}{(BottomLeft) -- (-3.75,2.5)}
+	...
+	
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareStroke{\BigCapRight{Center}}
+	\DeclareLetter{(UpperRight) -- (CenterBottom)}{\BigCapRight{4.5,1.5}}
+	\def\cappy#1{($(#1) + (-1.2,-1.48)$) to [bend left =90] ($(#1) + (1.2,1.6)$)}
+	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{(QUpperRight) to [bend left = 90] (UpperRight)}
+	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\cappy{3.5,2.5}}
+	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\cappy{2.5,1.5}}
+	...
+
+	\pagebreak
+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\BigCapLeft{Center}}
+	\DeclareLetter{\BLCUR}{\BigCapLeft{0.25, -1.5}}
+	\DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}
+	\DeclareLetter{\BLCUR}{\RightCapLeft{3.5,3.5}}
+	\DeclareLetter{\BLCUR}{\RightCapLeft{BottomLeft}}
+	...
+	+	
+	\DeclareStroke{\BigCapLeft{Center}}
+	\DeclareStroke{\RightDiagonal}
+	\DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}
+	\DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}
+	\DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}
+	\DeclareLetter{\BLCUR}{\LeftCapLeft{0.5, 0}}
+	
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\BigCapLeft{Center}}
+	\DeclareLetter{\RightDiagonal}{\NEC{BottomLeft}}
+	\DeclareLetter{\RightDiagonal}{\NEL{UpperRight}}
+	\DeclareLetter{\RightDiagonal}{\NEL{Center}}
+	\DeclareLetter{\RightDiagonal}{\NEL{BottomLeft}}
+	+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\BigCapLeft{Center}}
+	\DeclareLetter{(BottomLeft) -- (CenterUpper)}{\NEC{CenterUpper}}
+	\DeclareLetter{\RightDiagonal}{\NER{UpperRight}}
+	\DeclareLetter{\RightDiagonal}{\NER{Center}}
+	\DeclareLetter{\RightDiagonal}{\NER{BottomLeft}}
+	...
+	
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\BigCupLeft{Center}}
+	\DeclareLetter{\RightDiagonal}{\NWC{BottomLeft}}
+	\DeclareLetter{\RightDiagonal}{\NWL{UpperRight}}
+	\DeclareLetter{\RightDiagonal}{\NWL{Center}}
+	\DeclareLetter{\RightDiagonal}{\NWL{BottomLeft}}
+	...
+	+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\BigCupLeft{Center}}
+	\DeclareLetter{\RightDiagonal}{\NWC{UpperRight}}
+	\DeclareLetter{\RightDiagonal}{\NWR{UpperRight}}
+	\DeclareLetter{\RightDiagonal}{\NWC{(3.25,5.65}}
+	\DeclareLetter{\RightDiagonal}{\NWC{0,1.25}}
+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\Dot{Center}}
+	\DeclareLetter{\RightDiagonal}{\Dot{-3.75,-2.5}}
+	\DeclareLetter{\RightDiagonal}{\Dot{8.625,9}}
+	\DeclareLetter{\RightDiagonal}{\Dot{4.75,4.25}}
+	\DeclareLetter{\RightDiagonal}{\Dot{1.5,0}}
+	\DeclareLetter{\RightDiagonal}{\Dot{Center}}
+	+
+	\DeclareStroke{\Dot{Center}}
+	\DeclareStroke{\RightDiagonal}
+	\DeclareLetter{\RightDiagonal}{\Dot{11.25,12.5}}
+	\DeclareLetter{\RightDiagonal}{\Dot{4.75,9.65}}
+	\DeclareLetter{\RightDiagonal}{\Dot{3.25,6.25}}
+	\DeclareLetter{\RightDiagonal}{\Dot{-1.5,1.35}}
+	...
+
+	\DeclareStroke{\LeftDiagonal}
+	\emty
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{-1.875,12.5}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{-1.5,9}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{1.5,4.5}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{4.65,0}}
+	...
+	+
+	\DeclareStroke{\LeftDiagonal}
+	\emty
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{9.375,-2.5}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{3.5,9}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{6.25,4.5}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{9,0.5}}
+	\DeclareLetter{\LeftDiagonal}{\MediumCircle{Center}}
+
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareLetter{(UpperLeft) -- (3,6)}{(BottomRight) -- (4.5,4)}
+	\DeclareLetter{\LeftDiagonal}{(-1.5,9) -- (0.85,5.65)}
+	\DeclareLetter{\LeftDiagonal}{(0.85,5.65) -- (3.25,2.25)}
+	\DeclareLetter{\LeftDiagonal}{(3.25,2.25) -- (5.65,-1.15)}
+	...
 
 
 \end{landscape}
