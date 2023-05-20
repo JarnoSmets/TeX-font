@@ -23,3 +23,27 @@
         		\end{tikzpicture}
 		}
 }
+
+\def\DeclareChar#1#2#3{%
+	\def\corpsgrootte{20pt}
+		\resizebox{\corpsgrootte}{!}{
+			\begin{tikzpicture}
+            			\pic{grid};
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+				\draw[line width = \thickness] #3;
+        		\end{tikzpicture}
+		}
+}
+\def\DeclareGlyph#1#2#3#4{%
+	\def\corpsgrootte{20pt}
+		\resizebox{\corpsgrootte}{!}{
+			\begin{tikzpicture}
+            			\pic{grid};
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+				\draw[line width = \thickness] #3;
+				\draw[line width = \thickness] #4;
+        		\end{tikzpicture}
+		}
+}

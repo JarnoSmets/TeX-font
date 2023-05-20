@@ -217,8 +217,8 @@
 
 \def\BigCircle{[black] (Center) circle (3){};}
 
-\def\VS#1{[black, line width = \thickness] ($(#1) + (0,0.25)$) to ($(#1) + (0,-0.25)$);}
-\def\HS#1{[black, line width = \thickness] ($(#1) + (0.25,0)$) to ($(#1) + (-0.25,0)$);}
+\def\VS#1{[black, line width = \thickness] ($(#1) + (0,1.5)$) to ($(#1) + (0,-1.5)$);}
+\def\HS#1{[black, line width = \thickness] ($(#1) + (1.5,0)$) to ($(#1) + (-1.5,0)$);}
 
 \def\MediumCircle#1{(#1) circle (1.75){};}
 

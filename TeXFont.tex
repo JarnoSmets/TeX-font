@@ -338,133 +338,152 @@
 
 
 	\DeclareLetter{\RightDiagonal}{\BigCircle}
-	...
-	\DeclareLetter{\CenterVertical}{\Dot{CenterCeiling}}
-	\DeclareLetter{\CenterVertical}{\Dot{3.5,10}}
-	\DeclareLetter{\CenterVertical}{\Dot{3.5,5}}
-	\DeclareLetter{\CenterVertical}{\Dot{3.5,0.5}}
-	\DeclareLetter{\CenterVertical}{\MediumCircle{CenterCellar}}
-	\DeclareLetter{\CenterVertical}{\MediumCircle{4.25,10}}
-	\DeclareLetter{\CenterVertical}{\MediumCircle{4.25,5}}
-	\DeclareLetter{\CenterVertical}{\MediumCircle{4.25,0.5}}
+	\DeclareStroke{\CenterVertical}
+	\DeclareLetter{\CenterVertical}{\MediumCircle{3.75,11.875}}
+	\DeclareLetter{\CenterVertical}{\MediumCircle{2.15,8.5}}
+	\DeclareLetter{\CenterVertical}{\MediumCircle{2.15,5}}
+	\DeclareLetter{\CenterVertical}{\MediumCircle{2.15,1.875}}
+	\DeclareLetter{(CenterCeiling) -- (3.75,1.875)}{\MediumCircle{CenterCellar}}
+	\DeclareChar{\MediumCircle{Center}}{(CenterHell) -- (CenterBottom)}{(CenterHeaven) -- (CenterUpper)}
+	+
+	\DeclareStroke{\CenterVertical}
+	\emty
+	\DeclareLetter{\CenterVertical}{\MediumCircle{5.35,9.5}}
+	\DeclareLetter{\CenterVertical}{\MediumCircle{5.35,5}}
+	\DeclareLetter{\CenterVertical}{\MediumCircle{5.35,1.875}}
 	\DeclareLetter{\CenterVertical}{\MediumCircle{Center}}
 	...	
 	
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{(CenterCeiling) -- (CenterUpper)}{(CenterBottom) -- (CenterCellar)}
-	\DeclareLetter{\CenterVertical}{\VS{3.25,10}}
-	\DeclareLetter{\CenterVertical}{\VS{3.25,5}}
-	\DeclareLetter{\CenterVertical}{\VS{3.25,0.5}}
-	...
+	\DeclareLetter{(CenterCeiling) -- (3.75,5.5)}{(3.75,4.5) -- (CenterCellar)}
+	\DeclareLetter{\CenterVertical}{\VS{2.25,7.5}}
+	\DeclareLetter{\CenterVertical}{\VS{2.25,5}}
+	\DeclareLetter{\CenterVertical}{\VS{2.25,1.5}}
+	\DeclareChar{(CenterCellar) -- (3.75,2.68)}{(3.75,3.33) -- (3.75,6)}{(3.75,6.6) -- (3.75,10)}
+	+
+	..
+	..
+	..
+	..
+	..
+	..
+	..
 
         \DeclareStroke{\CenterVertical}
-	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\CenterHorizontal}
 	\DeclareLetter{\BottomHorizontal}{\CenterVertical}
-	\DeclareLetter{\LV}{\TopHorizontal}
+	\DeclareLetter{\LeftVertical}{\TopHorizontal}
 	\DeclareLetter{\LeftVertical}{\CenterHorizontal}
 	\DeclareLetter{\BottomHorizontal}{\LeftVertical}
-        ...
+	\DeclareChar{\CenterVertical}{(CenterLeft) -- (2.75,5)}{(CenterRight) -- (4.75, 5)}
 	+
 	\DeclareStroke{\CenterHorizontal}
 	\DeclareStroke{\CenterVertical}
 	\DeclareLetter{\CenterVertical}{\TopHorizontal}
 	\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (UpperLeft)}
-	\DeclareLetter{\CenterVertical}{\LeftCenterHorizontal}
+	\DeclareLetter{\CenterVertical}{(Center) -- (CenterLeft)}
 	\DeclareLetter{\CenterVertical}{\LeftBottomHorizontal}
-	...
+	\DeclareChar{\CenterHorizontal}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
 
+
+	\DeclareStroke{\CenterVertical}
+	\DeclareStroke{\RightDiagonal}
+	\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomLeft}
+	\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (RightHeaven)}
+	\DeclareLetter{\CenterVertical}{(Center) -- (CenterUpperRight)}
+	\DeclareLetter{\CenterVertical}{(CenterCellar) -- (CenterBottomRight)}
+	\DeclareChar{\CenterVertical}{(CenterBottomLeft) -- (2.75,4.33)}{(CenterUpperRight) -- (4.75, 5.666)}
+	+
+	\DeclareStroke{\RightDiagonal}
+	\DeclareStroke{\CenterVertical}
+	\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}
+	\DeclareLetter{\CenterVertical}{\HypoUpperLeft}
+	\DeclareLetter{\CenterVertical}{(3.75,5) -- (CenterBottomLeft)}
+	\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}
+	\DeclareChar{(CenterBottomLeft) -- (CenterUpperRight)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomLeft}
-	\DeclareLetter{\CenterVertical}{\RightHypoHeaven}
-	\DeclareLetter{\CenterVertical}{\RightBigHypoUpperLeft}
-	\DeclareLetter{\CenterBottomVertical}{\RightBigHypoBottomLeft}
-	...
+	\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomRight}
+	\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (CenterUpperRight)}
+	\DeclareLetter{\CenterVertical}{(Center) -- (CenterBottomRight)}
+	\DeclareLetter{\CenterVertical}{(CenterCellar) -- (RightHell)}
+	\DeclareChar{(CenterBottomRight) -- (2.75, 5.666)}{(CenterUpperLeft) -- (4.75,4.33)}{\CenterVertical}
 	+
-	\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}
-	\DeclareLetter{\CenterVertical}{\HypoUpperLeft}
-	\DeclareLetter{\CenterVertical}{\LeftBigHypoUpperLeft}
-	\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}
-	...
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareStroke{\CenterVertical}
+	\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperRight}
+	\DeclareLetter{\CenterVertical}{\HypoUpperRight}
+	\DeclareLetter{\CenterVertical}{(Center) -- (CenterUpperLeft)}
+	\DeclareLetter{\CenterVertical}{(CenterCellar) -- (CenterBottomLeft)}
+	\DeclareChar{(CenterBottomRight) -- (CenterUpperLeft)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
 
 	\DeclareStroke{\CenterVertical}
-	\DeclareStroke{\RightDiagonal}
-	...
-	...
-	...
-	...
-	...
-	+
-	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}
-	\DeclareLetter{\CenterVertical}{\HypoUpperLeft}
-	\DeclareLetter{\CenterVertical}{\LeftBigHypoUpperLeft}
-	\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}
-
-
-
-	\DeclareStroke{\CenterVertical}
-	\DeclareStroke{\ArchBottomLeft}
+	\DeclareStroke{\BigSE}
 	\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterCellar}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{Center}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCapRight{CenterBottom}}
-	...
+	\DeclareLetter{\CenterVertical}{\RightCapRight{CenterCeiling}}
+	\DeclareLetter{\CenterVertical}{\RightCapRight{Center}}
+	\DeclareLetter{\CenterVertical}{\RightCapRight{CenterCellar}}
+	\DeclareChar{\CenterVertical}{(CenterBottomLeft) to [bend left = 55] (2.75,4.333)}{(CenterUpperRight) to [bend left = -55] (4.75,5.666)}
 	+
-	\DeclareStroke{\ArchBottomLeft}
+	\DeclareStroke{\BigSE}
 	\DeclareStroke{\CenterVertical}
-	\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterUpper}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{3.75, 6.125}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCapRight{CenterBottom}}
-	...
-
+	\DeclareLetter{\CenterVertical}{\BigCapRight{CenterUpper}}
+	\DeclareLetter{\CenterVertical}{\LeftCapRight{CenterCeiling}}
+	\DeclareLetter{\CenterVertical}{\LeftCapRight{3.75, 5}}
+	\DeclareLetter{\CenterVertical}{\LeftCapRight{CenterBottom}}
+	\DeclareChar{((0,1.5) to [bend left = 55] (7.5,4.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
+		
+	
 	\DeclareStroke{\CenterVertical}
-	\DeclareStroke{\ArchBottomRight}
-	\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterCellar}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{Center}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCapLeft{CenterBottom}}
+	\DeclareStroke{\BigSW}
+	\DeclareLetter{\CenterVertical}{\BigCapLeft{3.75,-1.25}}
+	\DeclareLetter{\CenterVertical}{\RightCapLeft{CenterCeiling}}
+	\DeclareLetter{\CenterVertical}{\RightCapLeft{Center}}
+	\DeclareLetter{\CenterVertical}{\RightCapLeft{CenterCellar}}
+	\DeclareChar{(CenterUpperLeft) to [bend left = 55] (2.75,5.666)}{(CenterBottomRight) to [bend left = -55] (4.75,4.333)}{\CenterVertical}
 	+
-	\DeclareStroke{\ArchBottomRight}
+	\DeclareStroke{\BigSW}
 	\DeclareStroke{\CenterVertical}
 	\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterUpper}}
 	\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterCeiling}}
 	\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{Center}}
 	\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterBottom}}
-	...
+	\DeclareChar{(0,4.5) to [bend left = 55] (7.5,1.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
 
 	\DeclareStroke{\CenterVertical}
-	\DeclareStroke{\RampBottomLeft}
-	...
-	\DeclareLetter{\CenterBottomVertical}{\RightCup{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCup{3.75,6.125}}
-	\DeclareLetter{\CenterBottomVertical}{\BigCup{3.75,3.75}}
-	...
+	\DeclareStroke{\BigNE}
+	\DeclareLetter{\CenterVertical}{\BigCapRight{3.75,-1.25}}
+	\DeclareLetter{\CenterVertical}{\NEL{3.75,9.5}}
+	\DeclareLetter{\CenterVertical}{\NEL{3.5,6.125}}
+	\DeclareLetter{\CenterVertical}{\NEL{3.5,3.75}}
+	\DeclareChar{(CenterUpperLeft) to [bend left = -55] (2.75,5.666)}{(CenterBottomRight) to [bend left = 55] (4.75,4.333)}{\CenterVertical}
 	+
+	\DeclareStroke{\BigNE}
+	\DeclareStroke{\CenterVertical}
 	\DeclareLetter{\CenterBottomVertical}{\BigCupRight{3.75,11.125}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{3.75,6.125}}
-	\DeclareLetter{\CenterBottomVertical}{\LeftCupLeft{CenterBottom}}
-	...
+	\DeclareLetter{\CenterVertical}{\NER{CenterCeiling}}
+	\DeclareLetter{\CenterVertical}{\NER{3.75,5}}
+	\DeclareLetter{\CenterVertical}{\NER{CenterCellar}}
+	\DeclareChar{(0,8.5) to [bend left = -55] (7.5,5.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
+	
 
 	\DeclareStroke{\CenterVertical}
-	\DeclareStroke{\RampBottomRight}
+	\DeclareStroke{\BigNW}
 	\DeclareLetter{\CenterBottomVertical}{\BigCupLeft{3.75,3.75}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{3.75,6.125}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterCeiling}}
-	\DeclareLetter{\CenterBottomVertical}{\RightCupRight{CenterBottom}}
+	\DeclareLetter{\CenterVertical}{\RightCupRight{3.75,6.125}}
+	\DeclareLetter{\CenterVertical}{\RightCupRight{CenterCeiling}}
+	\DeclareLetter{\CenterVertical}{\RightCupRight{CenterBottom}}
+	\DeclareChar{\CenterVertical}{(CenterBottomLeft) to [bend left = -55] (2.75,4.333)}{(CenterUpperRight) to [bend left = 55] (4.75,5.666)}
 	+
-	\DeclareStroke{\RampBottomRight}
+	\DeclareStroke{\BigNW}
 	\DeclareStroke{\CenterVertical}
 	\DeclareLetter{\CenterUpperVertical}{\BigCupLeft{3.5,8.25}}
 	\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{3.75,6.125}}
 	\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{Center}}
 	\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{3.75,1}}
-	...
+	\DeclareChar{((0,4.5) to [bend left = -55] (7.5,8.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}
 
 	\DeclareStroke{\CenterVertical}
 	\DeclareStroke{\Dot{Center}}
@@ -480,31 +499,32 @@
 	\DeclareLetter{\CenterVertical}{\Dot{UpperLeft}}
 	\DeclareLetter{\CenterVertical}{\Dot{CenterBottomLeft}}
 	\DeclareLetter{\CenterVertical}{\Dot{BottomLeft}}
-...
+	\DeclareChar{\Dot{Center}}{(CenterCeiling) -- (3.75,6.5)}{(CenterCellar) -- (3.75,3.5)}
 
 	\def\broad{(OuterCenterLeft) -- (OuterCenterRight)}
 	\emty
 	\DeclareStroke{\broad}
-	\DeclareLetter{\broad}{\MediumCircle{OuterCenterLeft}}
-	\DeclareLetter{\broad}{\MediumCircle{0.5,5.5}}
-	\DeclareLetter{\broad}{\MediumCircle{3.75,5.5}}
-	\DeclareLetter{\broad}{\MediumCircle{7.5,5.5}}
-	...
+	\DeclareLetter{(OuterCenterRight) -- (CenterLeft)}{\MediumCircle{OuterCenterLeft}}
+	\DeclareLetter{\broad}{\MediumCircle{-0.5,6.5}}
+	\DeclareLetter{\broad}{\MediumCircle{3.75,6.5}}
+	\DeclareLetter{\broad}{\MediumCircle{8,5.5}}
+	\DeclareChar{\MediumCircle{Center}}{(OuterCenterLeft) -- (2,5)}{(OuterCenterRight) -- (5.5,5)}
 	+
 	\emty
 	\DeclareStroke{\broad}
-	\DeclareLetter{\broad}{\MediumCircle{OuterCenterRight}}
-	\DeclareLetter{\broad}{\MediumCircle{0.5,4.5}}
-	\DeclareLetter{\broad}{\MediumCircle{3.75,4.5}}
-	\DeclareLetter{\broad}{\MediumCircle{7.5,4.5}}
+	\DeclareLetter{(OuterCenterLeft) -- (CenterRight)}{\MediumCircle{OuterCenterRight}}
+	\DeclareLetter{\broad}{\MediumCircle{-0.5,3.5}}
+	\DeclareLetter{\broad}{\MediumCircle{3.75,3.5}}
+	\DeclareLetter{\broad}{\MediumCircle{8,4.5}}
 	\DeclareLetter{\broad}{\MediumCircle{Center}}
 	
 	\DeclareStroke{\broad}
 	\DeclareStroke{\broad}
-	\DeclareLetter{\broad}{\HS{-2.25,5.5}}
-	\DeclareLetter{\broad}{\HS{Center}}
-	\DeclareLetter{\broad}{\HS{8.625, 5.5}}
-	...
+	\DeclareLetter{(OuterCenterLeft) -- (2.75,5)}{(OuterCenterRight) -- (5,5)}
+	\DeclareLetter{\broad}{\HS{-2.25,6.5}}
+	\DeclareLetter{\broad}{\HS{3.75,6.5}}
+	\DeclareLetter{\broad}{\HS{8.625, 6.5}}
+	\DeclareChar{(-3.75,5) -- (0.25,5)}{(1.75,5) -- (5.75,5)}{(7.25,5) -- (11.25,5)}
 
 
 	\DeclareStroke{\broad}
@@ -514,7 +534,7 @@
 	\DeclareLetter{\RSD}{(5.625,10) -- (1.875,10)}
 	\DeclareLetter{\RSD}{(2.8,5) -- (-0.95,5)}
 	\DeclareLetter{\RSD}{(0,0) -- (-3.75,0)}
-	...
+	\DeclareChar{(0.75,5) -- (6.375,5)}{(5.625,10) -- (3.375,6)}{(BottomLeft) -- (2.25,4)}
 	+
 	\DeclareStroke{\RightDiagonal}
 	\DeclareStroke{\broad}
@@ -522,9 +542,7 @@
 	\DeclareLetter{\RSD}{(5.625,10) -- (9.375,10)}
 	\DeclareLetter{\RSD}{(2.8,5) -- (6.56,5)}
 	\DeclareLetter{\RSD}{(0,0) -- (3.75,0)}
-	...
-
-	
+	\DeclareChar{\RSD}{(CenterLeft) -- (1.75,5)}{(4.25,5) -- (6.5,5)}
 
 
 	\DeclareStroke{\broad}
@@ -534,7 +552,7 @@
 	\DeclareLetter{\LCD}{(1.875,10) -- (-1.875,10)}
 	\DeclareLetter{\LCD}{(4.7,5) -- (0.95,5)}
 	\DeclareLetter{\LCD}{(7.5,0) -- (3.75,0)}
-	...
+	\DeclareChar{(BottomRight) -- (5.25,4)}{(4.125,6) -- (1.875,10)}{(CenterLeft) -- (7.25,5)}
 	+
 	\DeclareStroke{\LeftDiagonal}
 	\DeclareStroke{\broad}
@@ -542,36 +560,37 @@
 	\DeclareLetter{\LCD}{(1.875,10) -- (5.625,10)}
 	\DeclareLetter{\LCD}{(4.7,5) -- (8.44,5)}
 	\DeclareLetter{\LCD}{(7.5,0) -- (11.25,0)}
-	...
+	\DeclareChar{\LCD}{(CenterRight) -- (5.75,5)}{(1.5,5) -- (3.25,5)}
 
 
 	\DeclareStroke{\broad}
-	\DeclareStroke{\ArchBottomRight}
+	\DeclareStroke{\BigSE}
 	\def\CurfLR{(BottomLeft) to [bend left = 70] (CenterUpperRight)}
 	\DeclareLetter{\CurfLR}{\TopHorizontal}
 	\DeclareLetter{\CurfLR}{(0,8) -- (7.5,8)}
 	\DeclareLetter{\CurfLR}{(1,5.5) -- (-2.75,5.5)}
 	\DeclareLetter{\CurfLR}{(BottomLeft) -- (OuterBottomLeft)}
-	...
+	\DeclareChar{(BottomLeft) to [bend left = 25] (3,3)}{(4.5,4.5) to [bend left = 25] (CenterUpperRight)}{(0,3.75) -- (7.5,3.75)}
 	+
-	\DeclareStroke{\ArchBottomRight}
+	\DeclareStroke{\BigSE}
 	\DeclareStroke{\broad}
 	\DeclareLetter{\BottomHorizontal}{(CenterCellar) to [bend left = 70] (OuterUpperRight)}
 	\DeclareLetter{(3.25,2.5) -- (OuterLowerRight)}{(BottomLeft) .. controls (CenterBottomLeft) .. (CenterBottom)}
 	\DeclareLetter{\CurfLR}{(1,5.5) -- (5.25,5.5)}
 	\DeclareLetter{\CurfLR}{(BottomLeft) -- (BottomRight)}
-	...
+	\DeclareChar{\CurfLR}{(OuterCenterLeft) -- (0,5)}{(2,5) -- (5.75,5)}
+
 
 	%Duplicate mirror
 
 	\DeclareStroke{\broad}
-	\DeclareStroke{\ArchBottomLeft}
+	\DeclareStroke{\BigSW}
 	\def\CurfRL{(BottomRight) to [bend left = -70] (CenterUpperLeft)}
 	\DeclareLetter{\CurfRL}{\TopHorizontal}
 	\DeclareLetter{(BottomRight) .. controls (CenterBottomRight) .. (CenterBottom)}{(4.25,2.5) -- (OuterLowerLeft)}
 	\DeclareLetter{\CurfRL}{(5.625,5) -- (1.875,5)}
 	\DeclareLetter{\CurfRL}{(BottomRight) -- (BottomLeft)}
-	...
+	\DeclareChar{(BottomRight) to [bend left = -25] (4.5,3)}{(3,4.5) to [bend left = -25] (CenterUpperLeft)}{(0,3.75) -- (7.5,3.75)}
 	+
 	\DeclareStroke{\ArchBottomRight}
 	\DeclareStroke{\broad}
@@ -579,7 +598,7 @@
 	\DeclareLetter{\CurfRL}{(0,8) -- (7.5,8)}
 	\DeclareLetter{\CurfRL}{(1,5.5) -- (5.25,5.5)}
 	\DeclareLetter{\CurfRL}{(BottomRight) -- (OuterBottomRight)}
-	...
+	\DeclareChar{\CurfRL}{(OuterCenterRight) -- (7.5,5)}{(5.5,5) -- (1.75,5)}
 	
 	
 	\def\RampLR{(CenterUpperLeft) to [bend left = -70] (BottomRight)}
@@ -589,7 +608,7 @@
 	\DeclareLetter{\RampLR}{(CenterUpperLeft) -- (OuterUpperLeft)}
 	\DeclareLetter{\RampLR}{(0.5,4) -- (-3.25, 4)}
 	\DeclareLetter{\RampLR}{(0,-0.5) -- (7.5,-0.5)}
-	...
+	\DeclareChar{(BottomRight) to [bend left = 25] (4.5,3)}{(3,4.5) to [bend left = 25] (CenterUpperLeft)}{(0,3.75) -- (7.5,3.75)}
 	+
 	\DeclareStroke{\RampLR}
 	\DeclareStroke{\broad}
@@ -597,7 +616,7 @@
 	\DeclareLetter{\RampLR}{\UpperHorizontal}
 	\DeclareLetter{\RampLR}{(0.5,5) -- (4.25,5)}
 	\DeclareLetter{(CenterUpperLeft) .. controls (CenterLeft) .. (Center)}{(3.25,5) -- (OuterCenterRight)}
-	...
+	\DeclareChar{\RampLR}{(-3.75,3.5) -- (-1,3.5)}{(1,3.5) -- (3.75,3.5)}
 
 
 
@@ -608,7 +627,7 @@
 	\DeclareLetter{\RampRL}{(CenterUpperRight) -- (CenterUpperLeft)}
 	\DeclareLetter{\RampRL}{(2.5,4) -- (6.25, 4)}
 	\DeclareLetter{(OuterCenterLeft) -- (4.25,5)}{(Center) .. controls (CenterRight) .. (CenterUpperRight)}
-	...
+	\DeclareChar{(BottomLeft) to [bend left = -25] (3,3)}{(4.5,4.5) to [bend left = -25] (CenterUpperRight)}{(0,3.75) -- (7.5,3.75)}
 	+
 	\DeclareStroke{\RampBottomRight}
 	\DeclareStroke{\broad}
@@ -616,7 +635,7 @@
 	\DeclareLetter{\RampRL}{(CenterUpperRight) -- (OuterUpperRight)}
 	\DeclareLetter{\RampRL}{(6.5,4) -- (10.25,4)}
 	\DeclareLetter{\RampRL}{(0,-0.5) -- (7.5,-0.5)}
-	...
+	\DeclareChar{\RampRL}{(11.25,3.5) -- (8.5,3.5)}{(5.5,3.5) -- (2.75,3.5)}
 
 	\DeclareStroke{\CenterHorizontal}
 	\DeclareStroke{\Dot{Center}}
@@ -632,15 +651,16 @@
 	\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperLeft}}
 	\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpper}}
 	\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperRight}}
+	\DeclareChar{\Dot{Center}}{(2.75,5) -- (CenterLeft)}{(CenterRight) -- (4.75,5)}
 
 	\def\RSDC{(BottomLeft) -- (5.625,7.5)}
 	\emty
 	\DeclareStroke{\RSDC}
-	\DeclareLetter{\RSDC}{\MediumCircle{7.30,8.75}}
+	\DeclareLetter{\RSDC}{\MediumCircle{7.10,8.85}}
 	\DeclareLetter{\RSDC}{\MediumCircle{3.75,8.17}}
-	\DeclareLetter{\RSDC}{\MediumCircle{1.15,4}}
+	\DeclareLetter{\RSDC}{\MediumCircle{1,4.5}}
 	\DeclareLetter{\RSDC}{\MediumCircle{-1.5,1}}
-	...
+	\DeclareChar{(-1.125, -1.5) -- (0.75,1)}{\MediumCircle{3,4}}{(5.25,7) -- (7.125,9.5)}
 	+
 	\DeclareStroke{\RSDC}
 	\emty
@@ -649,14 +669,13 @@
 	\DeclareLetter{\RSDC}{\MediumCircle{4.5,3.5}}
 	\DeclareLetter{\RSDC}{\MediumCircle{2.25,0.5}}
 	\DeclareLetter{\RSDC}{\MediumCircle{2.8125,3.75}}
-	...
 
 	\DeclareStroke{\RSDC}
 	\DeclareStroke{\RSDC}
-	\DeclareLetter{\RightDiagonal}{(1.5,8) -- (3.37,9.5)}
+	\DeclareLetter{\RightDiagonal}{(2.0625,8.5) -- (4.3125,11.5)}
 	\DeclareLetter{\RightDiagonal}{(-0.5475,5) -- (1.6825,8)}
 	\DeclareLetter{\RightDiagonal}{(-3.1875,1.5) -- (-0.9375,4.5)}
-	...
+	\DeclareChar{(BottomLeft) -- (1.9375, 2.58333)}{(2.615,3.4875) -- (4.5531,6.07)}{(5.2656 ,7.0208) -- (7.203 ,9.6041)}
 	+
 	...
 	...
@@ -673,7 +692,8 @@
 	\DeclareLetter{\BRCU}{(CenterLeft) -- (CenterUpper)}
 	\DeclareLetter{\BRCU}{(5.5,4) -- (1.76,1.48)}
 	\DeclareLetter{\BRCU}{(BottomRight) -- (3.75,-2.5)}
-	...
+	\DeclareChar{(BottomRight) -- (6,3) }{(CenterUpper) -- (5,5) }{(3.5,3) -- (7.5,5)}
+	+
 	\DeclareStroke{\RightDiagonal}
 	\DeclareStroke{\LeftDiagonal}
 	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{(BottomLeft) -- (CenterRight)}
@@ -681,63 +701,74 @@
 	\DeclareLetter{\URCB}{(CenterUpper) -- (UpperLeft)}
 	\DeclareLetter{\URCB}{(-1.75,6.5) -- (2,4)}
 	\DeclareLetter{\URCB}{(BottomLeft) -- (-3.75,2.5)}
-	...
+	\DeclareChar{(1.875,0) -- (4.25,3.17)}{(6,5.5) -- (CenterUpperRight)}{(3,5.73) -- (7,2.75)}
 	
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\BigCapRight{Center}}
-	\DeclareLetter{(UpperRight) -- (CenterBottom)}{\BigCapRight{4.5,1.5}}
+	\DeclareStroke{\BigSE}
+	\DeclareLetter{(UpperRight) -- (CenterBottom)}{\BigCapRight{4.5,1.25}}
 	\def\cappy#1{($(#1) + (-1.2,-1.48)$) to [bend left =90] ($(#1) + (1.2,1.6)$)}
-	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{(QUpperRight) to [bend left = 90] (UpperRight)}
-	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\cappy{3.5,2.5}}
-	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\cappy{2.5,1.5}}
-	...
+	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\SEL{QUpperRight}}
+	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\SEC{2.5,3.5}}
+	\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\SEC{1,0.5}}
+	\DeclareChar{(BottomLeft) -- (QUpperRight)}{(0,4) to [bend left = 25] (2.5,5)}{(5.5,5.5) to [bend left = 25] (8.5,5.5)}
+	+
+	\DeclareStroke{\BigSE}
+	\DeclareStroke{\LeftDiagonal}
+	\DeclareLetter{(CenterUpper) -- (BottomLeft)}{\BigCapRight{3.75,6}}
+	\DeclareLetter{\RightDiagonal}{(CenterCeiling) to [bend left = 55] (UpperRight)}
+	\DeclareLetter{\RightDiagonal}{(CenterLeft) to [bend left = 55] (Center)}
+	\DeclareLetter{\RightDiagonal}{\SER{BottomLeft}}
+	\DeclareChar{(CenterBottomLeft) to [bend left = 55] (CenterRight)}{(BottomLeft) -- (QBottomLeft)}{(QUpperRight) -- (UpperRight)}
 
 	\pagebreak
 
 	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\BigCapLeft{Center}}
+	\DeclareStroke{\BigSW}
 	\DeclareLetter{\BLCUR}{\BigCapLeft{0.25, -1.5}}
 	\DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}
 	\DeclareLetter{\BLCUR}{\RightCapLeft{3.5,3.5}}
 	\DeclareLetter{\BLCUR}{\RightCapLeft{BottomLeft}}
-	...
+	\DeclareChar{\BLCUR}{(0,6) to [bend left = 25] (4,6)}{(7,5) to [bend left = 25] (10,3)}
 	+	
-	\DeclareStroke{\BigCapLeft{Center}}
+	\DeclareStroke{\BigSW}
 	\DeclareStroke{\RightDiagonal}
 	\DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}
 	\DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}
 	\DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}
 	\DeclareLetter{\BLCUR}{\LeftCapLeft{0.5, 0}}
+	\DeclareChar{(0,0) -- (2,2)}{(CenterLeft) to [bend left = 55] (BottomRight)}{(5.5,5.5) -- (7.5,7.5)}
 	
 	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\BigCapLeft{Center}}
-	\DeclareLetter{\RightDiagonal}{\NEC{BottomLeft}}
+	\DeclareStroke{\BigNE}
+	\DeclareLetter{\RightDiagonal}{\BigCupLeft{BottomLeft}}
 	\DeclareLetter{\RightDiagonal}{\NEL{UpperRight}}
 	\DeclareLetter{\RightDiagonal}{\NEL{Center}}
 	\DeclareLetter{\RightDiagonal}{\NEL{BottomLeft}}
+	\DeclareChar{\BLCUR}{(0,6) to [bend left = -25] (2,3)}{(4.5,2.5) to [bend left = -25] (8,4)}
 	+
 	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\BigCapLeft{Center}}
-	\DeclareLetter{(BottomLeft) -- (CenterUpper)}{\NEC{CenterUpper}}
+	\DeclareStroke{\BigNE}
+	\DeclareLetter{(BottomLeft) -- (CenterUpper)}{\BigCupRight{CenterUpper}}
 	\DeclareLetter{\RightDiagonal}{\NER{UpperRight}}
 	\DeclareLetter{\RightDiagonal}{\NER{Center}}
 	\DeclareLetter{\RightDiagonal}{\NER{BottomLeft}}
-	...
+	\DeclareChar{(0,0) -- (2,2)}{(0,8.625) to [bend left = -55] (7.5,3.75)}{(5.5,5.5) -- (7.5,7.5)}
 	
 	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\BigCupLeft{Center}}
+	\DeclareStroke{\BigNW}
 	\DeclareLetter{\RightDiagonal}{\NWC{BottomLeft}}
 	\DeclareLetter{\RightDiagonal}{\NWL{UpperRight}}
-	\DeclareLetter{\RightDiagonal}{\NWL{Center}}
-	\DeclareLetter{\RightDiagonal}{\NWL{BottomLeft}}
-	...
+	\DeclareLetter{\RightDiagonal}{(Center) to [bend left = -55] (CenterRight)}
+	\DeclareLetter{\RightDiagonal}{(BottomLeft) to [bend left = = -55] (CenterCellar)}
+	\DeclareChar{\RightDiagonal}{(7,7) to [bend left = 25] (4,4)}{(2,4) to [bend left = 25] (-1,5)}
 	+
 	\DeclareStroke{\RightDiagonal}
-	\DeclareStroke{\BigCupLeft{Center}}
-	\DeclareLetter{\RightDiagonal}{\NWC{UpperRight}}
-	\DeclareLetter{\RightDiagonal}{\NWR{UpperRight}}
+	\DeclareStroke{\BigNW}
+	\DeclareLetter{\RightDiagonal}{\BigCupLeft{UpperRight}}
+	\DeclareLetter{\RightDiagonal}{(UpperRight) to [bend left = 55] (CenterCeiling)}
 	\DeclareLetter{\RightDiagonal}{\NWC{(3.25,5.65}}
 	\DeclareLetter{\RightDiagonal}{\NWC{0,1.25}}
+	\DeclareChar{(0,0) -- (2,2)}{(7.5,3) to [bend left = -55] (0,1.5)}{(5.5,5.5) -- (7.5,7.5)}
 
 	\DeclareStroke{\RightDiagonal}
 	\DeclareStroke{\Dot{Center}}
@@ -753,7 +784,7 @@
 	\DeclareLetter{\RightDiagonal}{\Dot{4.75,9.65}}
 	\DeclareLetter{\RightDiagonal}{\Dot{3.25,6.25}}
 	\DeclareLetter{\RightDiagonal}{\Dot{-1.5,1.35}}
-	...
+	\DeclareChar{(0,0) -- (2.625,3.5)}{(7.5,10) -- (4.875,6.5)}{\Dot{Center}}
 
 	\DeclareStroke{\LeftDiagonal}
 	\emty
@@ -761,7 +792,7 @@
 	\DeclareLetter{\LeftDiagonal}{\MediumCircle{-1.5,9}}
 	\DeclareLetter{\LeftDiagonal}{\MediumCircle{1.5,4.5}}
 	\DeclareLetter{\LeftDiagonal}{\MediumCircle{4.65,0}}
-	...
+	\DeclareChar{(8,0) -- (6.125,2.5)}{\MediumCircle{Center}}{(0,10) -- (1.875,7.5)}
 	+
 	\DeclareStroke{\LeftDiagonal}
 	\emty
@@ -777,10 +808,8 @@
 	\DeclareLetter{\LeftDiagonal}{(-1.5,9) -- (0.85,5.65)}
 	\DeclareLetter{\LeftDiagonal}{(0.85,5.65) -- (3.25,2.25)}
 	\DeclareLetter{\LeftDiagonal}{(3.25,2.25) -- (5.65,-1.15)}
-	...
-
+	\DeclareChar{(BottomRight) -- (5.5625, 2.58333)}{(4.885,3.4875) -- (2.95,6.07)}{(1.875,7.0208) -- (0 ,9.6041)}
 	+
-
 	...
 	...
 	...
@@ -789,68 +818,71 @@
 	...
 
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\SEC{Center}}
-	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\SEC{CenterBottom}}
+	\DeclareStroke{\BigSE}
+	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\BigCapRight{3.25, 1.25}}
 	\DeclareLetter{\LeftDiagonal}{\SEL{UpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\SEL{Center}}
 	\DeclareLetter{\LeftDiagonal}{\SEL{BottomRight}}
-	...
+	\DeclareChar{\LeftDiagonal}{(0,2) to [bend left = 25] (2,5)}{(4,6.5) to [bend left = 25] (7,8)}
 	+
-	\DeclareStroke{\SEC{Center}}
+	\DeclareStroke{\BigSE}
 	\DeclareStroke{\LeftDiagonal}
 	\DeclareLetter{\LeftDiagonal}{\SEC{UpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\SER{UpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\SER{Center}}
 	\DeclareLetter{\LeftDiagonal}{\SER{BottomRight}}
-	...
+	\DeclareChar{(0,0) to [bend left = 55] (7.5,6.125)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}
 
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\SWC{Center}}
-	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\SWC{5.625,2.5}}
+	\DeclareStroke{\BigSW}
+	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\BigCapLeft{3.25,1.25}}
 	\DeclareLetter{\LeftDiagonal}{\SWR{UpperLeft}}
-	\DeclareLetter{\LeftDiagonal}{\SWL{Center}}
+	\DeclareLetter{\LeftDiagonal}{(Center) to [bend left = 55] (CenterRight)}
 	\DeclareLetter{\LeftDiagonal}{\SWL{BottomRight}}
-	....
+	\DeclareChar{\LeftDiagonal}{(-1,6) to [bend left =25] (1.5,7)}{(4,7) to [bend left =25] (7,5)}
 	+
-	\DeclareStroke{\SWC{Center}}
+	\DeclareStroke{\BigSW}
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareLetter{\LeftDiagonal}{\SWC{UpperLeft}}
-	\DeclareLetter{\LeftDiagonal}{\SWC{UpperLeft}}
-	\DeclareLetter{\LeftDiagonal}{\SWC{Center}}
-	\DeclareLetter{\LeftDiagonal}{\SWC{CenterBottom}}
-	...
+	\DeclareLetter{\LeftDiagonal}{\BigCapLeft{UpperLeft}}
+	\DeclareLetter{\LeftDiagonal}{\SWC{-0.5,10}}
+	\DeclareLetter{\LeftDiagonal}{\SWC{3,5.5}}
+	\DeclareLetter{\LeftDiagonal}{\SWC{5, 2.25}}
+	\DeclareChar{(0,4.5) to [bend left = 55] (7.5,3.5)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}
+	
 
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\NEC{Center}}
-	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\NEC{CenterBottom}}
+	\DeclareStroke{\BigNE}
+	\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\BigCapRight{3.75,1.5}}
 	\DeclareLetter{\LeftDiagonal}{\NEC{QUpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\NEC{Center}}
-	\DeclareLetter{\LeftDiagonal}{\NEC{CenterBottom}}
-	...
-	+
-	\DeclareStroke{\NEC{Center}}
+	\DeclareLetter{\LeftDiagonal}{\NEC{7,2}}
+	\DeclareChar{\LeftDiagonal}{(-1,8) to [bend left=-25](2,5)}{(6,4) to [bend left=-25] (9,4)}
+	+	
+	%HIERNAAR KIJKEN 
+	\DeclareStroke{\BigNE}
 	\DeclareStroke{\LeftDiagonal}
-	...
-	\DeclareLetter{\LeftDiagonal}{\NEL{UpperLeft}}
-	\DeclareLetter{\LeftDiagonal}{\NEL{Center}}
+	\DeclareLetter{\LeftDiagonal}{(LeftHeaven) to [bend left =-55] (5.625,7.5)}
+	\DeclareLetter{\LeftDiagonal}{(UpperLeft) to [bend left = -55] (1.875, 5)}
+	\DeclareLetter{\LeftDiagonal}{(Center) to [bend left = -55] (CenterCellar)}
 	\DeclareLetter{\LeftDiagonal}{\NEL{BottomRight}}
-	...
+	\DeclareChar{(0,7.5) to [bend left = -55] (7.5,6.5)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}
 
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\NWC{Center}}
-	...
+	\DeclareStroke{\BigNW}
+	\DeclareLetter{\LeftDiagonal}{\BigCupLeft{7,1}}
 	\DeclareLetter{\LeftDiagonal}{\NWL{UpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\NWL{Center}}
 	\DeclareLetter{\LeftDiagonal}{\NWL{BottomRight}}
-	...
+	\DeclareChar{\LeftDiagonal}{(3,4) to [bend left = 25] (0,4)}{(5,5) to [bend left = -25] (6,7.5)}
 	+
 	\DeclareStroke{\LeftDiagonal}
-	\DeclareStroke{\NWC{Center}}
-	...
+	\DeclareStroke{\BigNW}
+	\DeclareLetter{\LeftDiagonal}{\BigCupLeft{UpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\NWR{UpperLeft}}
 	\DeclareLetter{\LeftDiagonal}{\NWR{Center}}
 	\DeclareLetter{\LeftDiagonal}{\NWR{BottomRight}}
-	...
+	\DeclareChar{(CenterLeft) to [bend left = -55] (UpperRight)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}
+	
 	
 	\DeclareStroke{\LeftDiagonal}
 	\DeclareStroke{\Dot{Center}}
@@ -866,7 +898,7 @@
 	\DeclareLetter{\LeftDiagonal}{\Dot{-1.5,9}}
 	\DeclareLetter{\LeftDiagonal}{\Dot{1.5,4.5}}
 	\DeclareLetter{\LeftDiagonal}{\Dot{4.65,0}}
-	...
+	\DeclareChar{\Dot{Center}}{(7.5,0) -- (5.625,2.5)}{(0,10) -- (1.875 ,7.5)}
 
 	\emty
 	\DeclareStroke{\BigSE}
@@ -874,7 +906,7 @@
 	\DeclareLetter{\BigSE}{\MediumCircle{OuterUpperRight}}
 	\DeclareLetter{\BigSE}{\MediumCircle{2,9}}
 	\DeclareLetter{\BigSE}{\MediumCircle{-1.875,2}}
-	...
+	\DeclareChar{\MediumCircle{Center}}{(0,0) to [bend left =45] (1.875, 2.5)}{(5.625,7.5) to [bend left = 45] (7.5,10)}
 	+
 	\DeclareStroke{\BigSE}
 	\emty
@@ -886,11 +918,11 @@
 
 	\DeclareStroke{\BigSE}
 	\DeclareStroke{\BigSE}
-	...
+	\DeclareLetter{(0,0) to [bend left = 45] (3,4)}{(4,6) to [bend left = 45] (7.5,10)}
 	\DeclareLetter{\BigSE}{\SER{CenterUpperRight}}
 	\DeclareLetter{\BigSE}{\SEC{Center}}
 	\DeclareLetter{\BigSE}{\SEL{1.875,0}}
-	...
+	\DeclareLetter{(0,0) to [bend left = 45] (5.625,5)}{(7.5,10) to [bend left =-45] (3.75,2.5)}
 	+
 	....
 	...
@@ -899,44 +931,46 @@
 	....
 	...
 	
-	\DeclareStroke{\BigSW}
 	\DeclareStroke{\BigSE}
+	\DeclareStroke{\BigSW}
+	\DeclareLetter{\BigSE}{(CenterCeiling) to [bend left = 55] (CenterBottomRight)}
 	\DeclareLetter{\BigSE}{\SWL{CenterUpperRight}}
 	\DeclareLetter{\BigSE}{\SWL{2.25,5.75}}
 	\DeclareLetter{\BigSE}{\SWL{BottomLeft}}
-	...
+	\DeclareChar{\BigSE}{(1.5,8) to [bend left = -25] (-2,10.75)}{(3.75,5) to [bend left = 25] (5.823 ,2.25)}
 	+
 	\DeclareStroke{\BigSW}
 	\DeclareStroke{\BigSE}
-	...
+	\DeclareLetter{\BigSW}{\BigCapRight{(7.5, -2}}
 	\DeclareLetter{\BigSW}{\SEL{CenterUpperLeft}}
 	\DeclareLetter{\BigSW}{\SEL{5,5}}
 	\DeclareLetter{\BigSW}{\SEL{BottomRight}}
-	...
+	\DeclareChar{\BigSW}{(1,1) to [bend left = 25] (4,4)}{(7,7) to [bend left = 25] (10,9)}
+%
 
 	\DeclareStroke{\BigSE}
 	\DeclareStroke{\BigNE}
-	...
+	\DeclareLetter{\BigNE}{\BigCapRight{0,6}}
 	\DeclareLetter{\BigSE}{\NEL{CenterUpperRight}}
 	\DeclareLetter{\BigSE}{\NEL{2.25,5.75}}
 	\DeclareLetter{\BigSE}{\NEL{BottomLeft}}
-	...
+	\DeclareChar{\BigSE}{(0,8.5) to [bend left = -25] (1.15,5.5)}{(2.5,3.75) to [bend left = -25] (5,1.75)}
 	+
 	\DeclareStroke{\BigNE}
 	\DeclareStroke{\BigSE}
-	...
+	\DeclareLetter{\BigNE}{\SEC{BottomLeft}}
 	\DeclareLetter{\BigNE}{\SEL{CenterUpperLeft}}
 	\DeclareLetter{\BigNE}{\SEL{2,2}}
 	\DeclareLetter{\BigNE}{\SEL{BottomRight}}
-	...
+	\DeclareChar{\BigNE}{(-1,-1) to [bend left = 25] (1.5,1.5)}{(3,3) to [bend left =25] (6,6)}
 
 	\DeclareStroke{\BigSE}
 	\DeclareStroke{\BigNW}
-	...
+	\DeclareLetter{\BigNW}{\BigCapRight{7.5,6}}
 	\DeclareLetter{\BigSE}{\NWR{CenterUpperRight}}
-	\DeclareLetter{\BigSE}{\NWR{2.25,5.75}}
+	\DeclareLetter{\BigSE}{\NWR{(4.25,5.5}}
 	\DeclareLetter{\BigSE}{\NWR{BottomLeft}}
-	....
+	\DeclareGlyph{\BigSE}{(-2,4) to [bend left = -25] (0,4)}{(2,4) to [bend left = -25] (4.5,6.5)}{(5,8) to [bend left =-25] (5,10)}
 	+
 	\DeclareStroke{\BigNW}
 	\DeclareStroke{\BigSE}
@@ -944,7 +978,7 @@
 	\DeclareLetter{\BigNW}{\SEL{CenterUpperRight}}
 	\DeclareLetter{\BigNW}{\SEC{5.5,2}}
 	\DeclareLetter{\BigNW}{\SER{BottomLeft}}
-	...
+	\DeclareGlyph{\BigNW}{(2,-2) to [bend left = 25] (2,-0.5)}{(2,1) to [bend left =25] (6,4)}{(8,4) to [bend left = 25] (10,4)}
 
 	\DeclareStroke{\BigSE}
 	\DeclareStroke{\Dot{Center}}
@@ -960,7 +994,7 @@
 	\DeclareLetter{\BigSE}{\Dot{6.5,9.5}}
 	\DeclareLetter{\BigSE}{\Dot{0.5,7.75}}
 	\DeclareLetter{\BigSE}{\Dot{-2.5,1}}
-	...
+	\DeclareChar{\Dot{3.75,3.75}}{(0,7.5) to [bend left = 25] (3,5)}{(5, 3) to [bend left = 25] (6.5,0)} 
 
 	\emty
 	\DeclareStroke{\BigSW}
@@ -968,7 +1002,8 @@
 	\DeclareLetter{\BigSW}{\MediumCircle{1.5,5.25}}
 	\DeclareLetter{\BigSW}{\MediumCircle{3.5,4.5}}
 	\DeclareLetter{\BigSW}{\MediumCircle{5.5,2}}
-	...
+	\DeclareChar{\MediumCircle{Center}}{(0,0) to [bend left =-45] (1.875, 2.5)}{(5.625,7.5) to [bend left = -45] (7.5,10)}
+	+	
 	\DeclareStroke{\BigSW}
 	\emty
 	\DeclareLetter{\BigSW}{\MediumCircle{7.5,-1.875}}
@@ -980,11 +1015,11 @@
 
 	\DeclareStroke{\BigSW}
 	\DeclareStroke{\BigSW}
-	...
+	\DeclareLetter{(0,7.5) to [bend left = -35] (3 ,4.5)}{(7.5,0) to [bend left =35] (4.5,3)}
 	\DeclareLetter{\BigSW}{\SWC{2,6}}
 	\DeclareLetter{\BigSW}{\SWC{4,5}}
 	\DeclareLetter{\BigSW}{\SWC{6,2}}
-	...
+	\DeclareLetter{(0,7.5) to [bend left = 55] (CenterBottom)}{(7.5,0) to [bend left = -55] (1.875,5)}	
 	+
 	...
 	...
