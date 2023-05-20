@@ -1015,7 +1015,7 @@
 
 	\DeclareStroke{\BigSW}
 	\DeclareStroke{\BigSW}
-	\DeclareLetter{(0,7.5) to [bend left = -35] (3 ,4.5)}{(7.5,0) to [bend left =35] (4.5,3)}
+	\DeclareLetter{(0,7.5) to [bend left = 35] (3 ,4.5)}{(7.5,0) to [bend left =-35] (4.5,3)}
 	\DeclareLetter{\BigSW}{\SWC{2,6}}
 	\DeclareLetter{\BigSW}{\SWC{4,5}}
 	\DeclareLetter{\BigSW}{\SWC{6,2}}
@@ -1029,38 +1029,40 @@
 	...
 	...
 
+%NEXT PAGE
 	\DeclareStroke{\BigSW}
 	\DeclareStroke{\BigNE}
-	...
-	\DeclareLetter{\BigSW}{\NEL{1,7.5}}
-	...
-	...
-	...
-	...
+	\DeclareLetter{\BigSW}{\BigCupRight{BottomRight}}
+	\DeclareLetter{\BigSW}{\NEC{(1.25, 8.5}}
+	\DeclareLetter{\BigSW}{\NEC{6,6}}
+	\DeclareLetter{\BigSW}{\NEL{BottomRight}}
+	\DeclareChar{\BigSW}{(3,4) to [bend left =-25] (6,4)}{(8,5) to [bend left=-25] (9,7.5)}
+	%\DeclareChar{\BigNE}{(-3,2) to [bend left = -25] (0,2)}{(3,3) to [bend left = -25] (5,6)}
 	+
 	\DeclareStroke{\BigNE}
 	\DeclareStroke{\BigSW}
 	\DeclareLetter{\BigSW}{\NEC{0,7.5}}
 	\DeclareLetter{\BigSW}{\NEL{0,7.5}}
-	\DeclareLetter{\BigSW}{\NER{6.75,4}}
+	\DeclareLetter{\BigSW}{(6.5,3) to [bend left = 55] (0,6)}
 	\DeclareLetter{\BigSW}{\NER{BottomRight}}
-	...
+	\DeclareChar{(2.5,8) to [bend left = 25] (4.25,6.5)}{(7.5,0) to [bend left =-25] (6.5, 2.5)}{(0,8) to [bend left = -55] (CenterRight)}
+
 
 	\DeclareStroke{\BigSW}
 	\DeclareStroke{\BigNW}
-	...
+	\DeclareLetter{\BigSW}{\BigCupLeft{BottomRight}}
 	\DeclareLetter{\BigSW}{\NWL{2,7.5}}
 	\DeclareLetter{\BigSW}{\NWL{6,5}}
 	\DeclareLetter{\BigSW}{\NWL{BottomRight}}
-	...
+	\DeclareChar{\BigSW}{(8,8) to [bend left = 55] (8,6)}{(6,4) to [bend left = 55] (3,3)}
 	+
 	\DeclareStroke{\BigNW}
 	\DeclareStroke{\BigSW}
-	...
-	\DeclareLetter{\BigSW}{\NWL{CenterUpperLeft}}
+	\DeclareLetter{\BigSW}{(LeftHeaven) to [bend left = 55] (-2.5, 5)}
+	\DeclareLetter{\BigSW}{\NWR{CenterUpperLeft}}
 	\DeclareLetter{\BigSW}{\NWR{6.75,4}}
 	\DeclareLetter{\BigSW}{\NWR{BottomRight}}
-	...
+	\DeclareChar{(2.5,8) to [bend left = 25] (4.25,6.5)}{(7.5,0) to [bend left =-25] (6.5, 2.5)}{(CenterLeft) to [bend left = -55] (7.5,8)}
 
 	\DeclareStroke{\BigSW}
 	\DeclareStroke{\Dot{Center}}
@@ -1076,7 +1078,7 @@
 	\DeclareLetter{\BigSW}{\Dot{1.875,6}}
 	\DeclareLetter{\BigSW}{\Dot{4,5}}
 	\DeclareLetter{\BigSW}{\Dot{6,1.25}}
-	...
+	\DeclareChar{\Dot{Center}}{(0,0) to [bend left =-45] (1.875, 2.5)}{(5.625,7.5) to [bend left = -45] (7.5,10)}
 
 	\emty
 	\DeclareStroke{\BigNE}

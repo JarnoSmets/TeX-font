@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.9.17)  20 MAY 2023 16:43
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.9.17)  20 MAY 2023 21:05
  restricted system commands enabled.
 **TeXFont.tex
 (./TeXFont.tex
@@ -1410,6 +1410,9 @@ Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
 ] [7
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -1470,19 +1473,19 @@ Missing character: There is no ; (U+003B) in font nullfont!
 ] (./TeXFont.aux))
 
 Here is how much of LuaTeX's memory you used:
- 14042 strings out of 477805
+ 14064 strings out of 477805
  4441782,1373583 words of node,token memory allocated
  420 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 6 attribute, 48 glue_spec,
  6 attribute_list, 3 write nodes
-   avail lists: 1:8,2:409643,3:190634,4:328,5:524,6:54,7:231526,8:1,9:142743,10:
+   avail lists: 1:8,2:409643,3:190986,4:328,5:524,6:54,7:231526,8:1,9:142743,10:
 2,11:8
- 34250 multiletter control sequences out of 65536+600000
+ 34272 multiletter control sequences out of 65536+600000
  27 fonts using 1608431 bytes
  84i,11n,85p,409b,815s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/tex
 mf/fonts/opentype/public/lm/lmroman17-regular.otf>
-Output written on TeXFont.pdf (7 pages, 107041 bytes).
+Output written on TeXFont.pdf (7 pages, 108107 bytes).
 
 PDF statistics: 43 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream
