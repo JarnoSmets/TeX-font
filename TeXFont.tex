@@ -1002,7 +1002,7 @@
 	\DeclareLetter{\BigSW}{\MediumCircle{1.5,5.25}}
 	\DeclareLetter{\BigSW}{\MediumCircle{3.5,4.5}}
 	\DeclareLetter{\BigSW}{\MediumCircle{5.5,2}}
-	\DeclareChar{\MediumCircle{Center}}{(0,0) to [bend left =-45] (1.875, 2.5)}{(5.625,7.5) to [bend left = -45] (7.5,10)}
+	\DeclareChar{\MediumCircle{Center}}{(7.5,0) to [bend left =-45] (5.625, 2.5)}{(1.875,7.5) to [bend left = -45] (0,10)}
 	+	
 	\DeclareStroke{\BigSW}
 	\emty
@@ -1078,7 +1078,7 @@
 	\DeclareLetter{\BigSW}{\Dot{1.875,6}}
 	\DeclareLetter{\BigSW}{\Dot{4,5}}
 	\DeclareLetter{\BigSW}{\Dot{6,1.25}}
-	\DeclareChar{\Dot{Center}}{(0,0) to [bend left =-45] (1.875, 2.5)}{(5.625,7.5) to [bend left = -45] (7.5,10)}
+	\DeclareChar{\Dot{Center}}{(7.5,0) to [bend left =-45] (5.625, 2.5)}{(1.875,7.5) to [bend left = -45] (0,10)}
 
 	\emty
 	\DeclareStroke{\BigNE}
@@ -1086,6 +1086,7 @@
 	\DeclareLetter{\BigNE}{\MediumCircle{-1.875,7.5}}
 	\DeclareLetter{\BigNE}{\MediumCircle{0.75,0.75}}
 	\DeclareLetter{\BigNE}{\MediumCircle{7.5,-1.875}}
+	\DeclareChar{\MediumCircle{Center}}{(7.5,0) to [bend left =45] (5.625, 2.5)}{(1.875,7.5) to [bend left = 45] (0,10)}
 	+
 	\DeclareStroke{\BigNE}
 	\emty
@@ -1097,11 +1098,11 @@
 
 	\DeclareStroke{\BigNE}
 	\DeclareStroke{\BigNE}
-	...
+	\DeclareLetter{(0,7.5) to [bend left = -35] (3 ,4.5)}{(7.5,0) to [bend left =35] (4.5,3)}
 	\DeclareLetter{\BigNE}{\NEC{2,6}}
 	\DeclareLetter{\BigNE}{\NEC{3,3}}
 	\DeclareLetter{\BigNE}{\NEC{5,2}}
-	...
+	\DeclareLetter{(7.5,0) to [bend left =45] (3.75,7.5)}{(0,10) to [bend left = -45] (5.625,5)}
 	+
 	...
 	...
@@ -1117,19 +1118,19 @@
 
 	\DeclareStroke{\BigNE}
 	\DeclareStroke{\BigNW}
-	...
+	\DeclareLetter{\BigNW}{(5.625,2) to [bend left = 45] (0,8.625)}
 	\DeclareLetter{\BigNW}{\NER{CenterUpperRight}}
-	\DeclareLetter{\BigNW}{\NER{2,5.75}}
+	\DeclareLetter{\BigNW}{\NER{5.625,2}}
 	\DeclareLetter{\BigNW}{\NER{BottomLeft}}
-	...
+	\DeclareChar{\BigNE}{(-1.5,2) to [bend left = -25] (1,2)}{(3,3) to [bend left =-25 ] (4,5.5)}
 	+
 	\DeclareStroke{\BigNW}
 	\DeclareStroke{\BigNE}
-	...
+	\DeclareLetter{\BigNE}{\BigCupLeft{CenterUpperLeft}}
 	\DeclareLetter{\BigNW}{\NEL{CenterUpperRight}}
-	\DeclareLetter{\BigNW}{\NEL{2,5.75}}
+	\DeclareLetter{\BigNW}{\NEL{6.5,1}}
 	\DeclareLetter{\BigNW}{\NEL{BottomLeft}}
-	...
+	\DeclareChar{\BigNW}{(4,6) to [bend left = -25] (5,3)}{(8,2) to [bend left = -25] (10.5,2)}
 
 	\DeclareStroke{\BigNE}
 	\DeclareStroke{\Dot{Center}}
@@ -1145,7 +1146,8 @@
 	\DeclareLetter{\BigNE}{\Dot{-2,7}}
 	\DeclareLetter{\BigNE}{\Dot{1,1}}
 	\DeclareLetter{\BigNE}{\Dot{7, -2}}
-	...
+	\DeclareChar{\Dot{3,3}}{(0,7.5) to [bend left = -45] (2,4)}{(4,2) to [bend left = -45] (7.5,0)}
+	
 
 	\emty
 	\DeclareStroke{\BigNW}
@@ -1153,7 +1155,7 @@
 	\DeclareLetter{\BigNW}{\MediumCircle{6, 6.5}}
 	\DeclareLetter{\BigNW}{\MediumCircle{4.25,3.75}}
 	\DeclareLetter{\BigNW}{\MediumCircle{1.875,1.5}}
-	...
+	\DeclareChar{\MediumCircle{4.5,3.5}}{(0,0) to [bend left = -45] (2.5,1.5)}{(6,5.5) to [bend left = -45] (7.5,7.5)}
 	+
 	\DeclareStroke{\BigNW}
 	\emty
@@ -1165,11 +1167,11 @@
 
 	\DeclareStroke{\BigNW}
 	\DeclareStroke{\BigNW}
-	...
+	\DeclareLetter{(0,0) to [bend left =-45] (4,3)}{(5,4) to [bend left = -45] (7.5,7.5)}
 	\DeclareLetter{\BigNW}{\NWC{6,6}}
 	\DeclareLetter{\BigNW}{\NWC{5,3}}
 	\DeclareLetter{\BigNW}{\NWC{2,2}}
-	...
+	\DeclareLetter{(0,0) to [bend left =-45] (3.75,7.5)}{(7.5,10) to [bend left =45] (1.875, 5)}
 
 	\DeclareStroke{\Dot{Center}}
 	\DeclareStroke{\BigNW}
@@ -1185,7 +1187,7 @@
 	\DeclareLetter{\BigNW}{\Dot{9.375,7}}
 	\DeclareLetter{\BigNW}{\Dot{6.75, 1}}
 	\DeclareLetter{\BigNW}{\Dot{0.5,-1.25}}
-	...
+	\DeclareChar{(0,0) to [bend left = -45] (4,2)}{(6,4) to [bend left =-45] (7.5,7.5)}{\Dot{5,3}}
 
 	\emty
 	\DeclareStroke{\Dot{Center}}
